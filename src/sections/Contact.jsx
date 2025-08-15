@@ -45,11 +45,11 @@ const Contact = () => {
   return (
     <section id='contact' className='c-space my-20 px-4 md:px-20 pb-20'>
     <div className='relative min-h-screen flex items-center justify-center flex-col'>
-    <img
+    {/* <img
       src='/images/terminal.png'
       alt='terminal background'
-      className='absolute inset-0 min-h-screen '
-      />
+      className='absolute  min-h-screen w-full object-cover '
+      /> */}
     <div className='contact-container w-full max-w-3xl'>
       <h3 className='text-content text-3xl font-semibold'>Let's talk</h3>
       <p className='text-lg text-white-600 mt-3'>
