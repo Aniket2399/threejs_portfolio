@@ -53,7 +53,7 @@ const Contact = () => {
     <div className='contact-container w-full max-w-3xl'>
       <h3 className='text-content text-3xl font-semibold'>Let's talk</h3>
       <p className='text-lg text-white-600 mt-3'>
-        Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to life, I’m here to help.
+        Whether you're hiring for a data or analytics role, want to talk fraud, BI, or forecasting, or just want a closer look at one of my dashboards, I'd love to hear from you.
       </p>
       <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col space-y-7'>
         <label className='space-y-3'>

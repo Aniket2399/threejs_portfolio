@@ -3,7 +3,7 @@ const navLinks = [
     name: "About Me",
     link: "#about",
   },
-  
+
   {
     name: "Projects",
     link: "#projects",
@@ -16,172 +16,163 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  
+
 ];
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Data", imgPath: "/images/code.svg" },
+  { text: "Insights", imgPath: "/images/ideas.svg" },
+  { text: "Signals", imgPath: "/images/concepts.svg" },
+  { text: "Dashboards", imgPath: "/images/designs.svg" },
+  { text: "Data", imgPath: "/images/code.svg" },
+  { text: "Insights", imgPath: "/images/ideas.svg" },
+  { text: "Signals", imgPath: "/images/concepts.svg" },
+  { text: "Dashboards", imgPath: "/images/designs.svg" },
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 5, suffix: "+", label: "Years in Analytics" },
+  { value: 3, suffix: "", label: "Industries: Banking, Health, Retail" },
+  { value: 28, suffix: "%", label: "Fraud Detection Accuracy Gain" },
+  { value: 18, suffix: "%", label: "Demand Forecast Precision Gain" },
 ];
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/react1.png",
-  },
-  {
-    imgPath: "/images/logos/angular-3.svg",
-  },
-  {
-    imgPath: "/images/logos/bootstrap-5.svg",
-  },
-  {
-    imgPath: "/images/logos/docker.png",
-  },
-  {
     imgPath: "/images/logos/power-bi.png",
-  },
-  {
-    imgPath: "/images/logos/microsoft-azure-2.svg",
-  },
-  {
-    imgPath: "/images/logos/nodejs.svg",
   },
   {
     imgPath: "/images/logos/tableau-logo-1.svg",
   },
   {
-    imgPath: "/images/logos/shopify.png",
+    imgPath: "/images/logos/python.svg",
+  },
+  {
+    imgPath: "/images/logos/microsoft-azure-2.svg",
   },
   {
     imgPath: "/images/logos/google-analytics-2.svg",
   },
   {
-    imgPath: "/images/logos/paypal-3.svg",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    imgPath: "/images/logos/docker.png",
+  },
+  {
+    imgPath: "/images/logos/git.svg",
   },
 ];
 
 const abilities = [
   {
     imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    title: "Decisions, Not Just Charts",
+    desc: "Turning raw data into answers stakeholders can act on the same day.",
   },
   {
     imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Cross-Domain Range",
+    desc: "Fluent across banking fraud, healthcare, and retail forecasting.",
   },
   {
     imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    title: "Trustworthy Data",
+    desc: "Data quality, validation, and governance built into every pipeline.",
   },
 ];
 
 const techStackImgs = [
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Python Developer",
+    name: "Python & Pandas",
     imgPath: "/images/logos/python.svg",
   },
   {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
+    name: "Tableau",
+    imgPath: "/images/logos/tableau-logo-1.svg",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "Power BI",
+    imgPath: "/images/logos/power-bi.png",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "AWS Data Stack",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    name: "Azure Data Factory",
+    imgPath: "/images/logos/microsoft-azure-2.svg",
   },
 ];
 
 const techStackIcons = [
   {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Python Developer",
+    name: "Python & Pandas",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    name: "AWS Data Stack",
+    modelPath: "/models/aws_logo.glb",
+    scale: 0.3,
+    rotation: [0, -Math.PI / 4, 0],
   },
   {
-    name: "Interactive Developer",
+    name: "React Dashboards",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Interactive Data Viz",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
-    name: "Database",
-    modelPath: "/models/aws_logo.glb",
-    scale: 0.3,
+    name: "Git & GitHub",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
 ];
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Aniket pairs deep SQL and Python skills with a sharp eye for fraud patterns, turning noisy transaction data into decisions the risk team can trust.",
     imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    logoPath: "/images/jpmc.svg",
+    title: "Data Analyst, JP Morgan Chase",
+    date: "September 2024 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Analyzed large-scale financial transaction data in SQL to surface suspicious activity across banking channels.",
+      "Built Python anomaly-detection logic, improving fraud detection accuracy by 28% and cutting false positives.",
+      "Shipped Tableau dashboards for fraud trends, reducing manual investigation effort by 22%.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Aniket took our AI agents from experiments to production, and built the dashboard our whole team now uses to run them.",
     imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    logoPath: "/images/astoria.svg",
+    title: "AI Engineer, Astoria AI",
+    date: "September 2025 - February 2026",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Built and deployed LLM-based AI agents, taking them from prototypes to running services.",
+      "Designed a unified agent dashboard with drag-and-drop cards to monitor and operate every agent.",
+      "Developed a scheduler-driven recruiting pipeline with OAuth 2.0-secured APIs.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "Aniket automated our healthcare reporting and rebuilt the ETL behind it, saving the team days of manual work every cycle.",
     imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    logoPath: "/images/capgemini.svg",
+    title: "Data Analyst, Capgemini",
+    date: "January 2022 - July 2023",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Automated recurring healthcare reporting in Power BI, cutting manual effort by ~28%.",
+      "Engineered Azure Data Factory ETL pipelines into analytics-ready datasets under PHI governance.",
+      "Built Tableau dashboards and Python cohort models to guide higher-risk patient interventions.",
     ],
   },
 ];
@@ -189,121 +180,84 @@ const expCards = [
 const expLogos = [
   {
     name: "logo1",
-    imgPath: "/images/logo1.png",
+    imgPath: "/images/jpmc.svg",
   },
   {
     name: "logo2",
-    imgPath: "/images/logo2.png",
+    imgPath: "/images/astoria.svg",
   },
   {
     name: "logo3",
-    imgPath: "/images/logo3.png",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
+    imgPath: "/images/capgemini.svg",
   },
 ];
 
 const socialImgs = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
-  },
-  {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://linkedin.com/in/aniketk99",
+  },
+  {
+    name: "github",
+    imgPath: "/images/github.svg",
+    url: "https://github.com/Aniket2399",
   },
 ];
 
 const workExperiences = [
   {
     id: 1,
-    name: 'State Street-NJ, USA',
-    pos: 'Full Stack Developer',
+    name: 'JP Morgan Chase - NJ, USA',
+    pos: 'Data Analyst',
     duration: 'Sep 2024 - Present',
-    icon: '/images/state_street.svg',
+    icon: '/images/jpmc.svg',
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Analyzed large-scale financial transaction data in SQL to surface suspicious activity and support enterprise fraud monitoring.",
+      "Built Python anomaly-detection logic and tuned rule-based models, improving fraud detection accuracy by 28% while cutting false positives.",
+      "Shipped interactive Tableau dashboards for fraud trends and alert volumes, reducing manual investigation effort by 22%.",
     ],
     animation: 'rally',
   },
   {
     id: 2,
-    name: 'Capgemini',
-    pos: 'Full Stack Developer',
+    name: 'Astoria AI - NY, USA (Remote)',
+    pos: 'AI Engineer (Part-Time)',
+    duration: 'Sep 2025 - Feb 2026',
+    icon: '/images/astoria.svg',
+    responsibilities: [
+      "Built and deployed LLM-based AI agents, taking them from prototypes to running, usable services.",
+      "Designed a unified dashboard with drag-and-drop agent cards to monitor and operate all agents in one view.",
+      "Developed an automated, scheduler-driven candidate-recruiting pipeline with OAuth 2.0-secured APIs.",
+    ],
+    icon2: '/images/astoria.svg',
+    animation: 'salute',
+  },
+  {
+    id: 3,
+    name: 'Capgemini - India',
+    pos: 'Data Analyst',
     duration: 'Jan 2022 - July 2023',
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Automated recurring healthcare reporting in Power BI, cutting manual effort by ~28% and improving delivery consistency.",
+      "Engineered Azure Data Factory ETL pipelines consolidating disparate healthcare sources into analytics-ready datasets.",
+      "Built Tableau dashboards and Python cohort models for patient engagement under PHI governance.",
     ],
     icon: '/images/capgemini.svg',
     animation: 'fist',
   },
   {
-    id: 3,
-    name: 'Wipro',
-    pos: 'Intern',
+    id: 4,
+    name: 'Accenture - India',
+    pos: 'Data Analyst',
     duration: 'Aug 2019 - Dec 2021',
-    icon: '/images/wipro-logo.png',
+    icon: '/images/accenture.svg',
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Built Python time-series demand-forecasting models, increasing prediction precision by 18% and improving inventory planning.",
+      "Mined historical sales with SQL to surface seasonal demand, reducing stockouts by 15%.",
+      "Delivered Power BI KPI dashboards for inventory turnover and replenishment, speeding stakeholder decisions by 25%.",
     ],
-    animation: 'salute',
+    animation: 'rally',
   },
 ];
 
@@ -312,10 +266,11 @@ export {
   abilities,
   logoIconsList,
   counterItems,
+  expCards,
+  expLogos,
   socialImgs,
   techStackIcons,
   techStackImgs,
   navLinks,
   workExperiences,
 };
-

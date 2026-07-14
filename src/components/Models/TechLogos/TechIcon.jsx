@@ -7,7 +7,7 @@ const TechIcon = ({ model }) => {
   const scene = useGLTF(model.modelPath)
 
   useEffect(() => {
-    if (model.name === 'Database') {
+    if (model.name === 'AWS Data Stack') {
       scene.scene.traverse((child) => {
         if (
           child.isMesh &&
@@ -21,7 +21,7 @@ const TechIcon = ({ model }) => {
       })
     }
 
-    if (model.name === 'Interactive Developer') {
+    if (model.name === 'Interactive Data Viz') {
       scene.scene.traverse((child) => {
         if (child.isMesh) {
           child.material = new THREE.MeshStandardMaterial({ color: 'white' })
@@ -31,7 +31,7 @@ const TechIcon = ({ model }) => {
   }, [model.name, scene])
 
   // Only override position for AWS
-  const finalPosition = model.name === 'Database' ? [0, -1.5, 0] : [0, 0, 0]
+  const finalPosition = model.name === 'AWS Data Stack' ? [0, -1.5, 0] : [0, 0, 0]
 
   return (
     <Canvas>

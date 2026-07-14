@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="26" fill="#0f1e33"/>
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">JPM</text>
+  <text x="60" y="86" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="400" fill="#9fb4cf" text-anchor="middle" letter-spacing="2">CHASE</text>
+</svg>

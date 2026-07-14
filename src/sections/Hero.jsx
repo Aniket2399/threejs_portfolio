@@ -34,11 +34,11 @@ const Hero = () => {
           <div className='flex flex-col gap-7'>
             <div className='hero-text'>
               <h1>
-                Shaping
+                Turning
                 <span className='slide'>
                   <span className='wrapper'>
-                    {words.map((word) => (
-                      <span key={word.text} className='flex items-center md:gap-3 gap-1 pb-2'>
+                    {words.map((word, index) => (
+                      <span key={`${word.text}-${index}`} className='flex items-center md:gap-3 gap-1 pb-2'>
                         <img
                           src={word.imgPath} alt={word.text} className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50'
                         />
@@ -48,10 +48,10 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1>into Decisions that</h1>
+              <h1>Move the Business</h1>
             </div>
-            <p className='text-white-50 md:text-xl relative z-10 pointer-events-none'>I'm a full-stack developer with a passion for creating innovative and user-friendly web applications.</p>
+            <p className='text-white-50 md:text-xl relative z-10 pointer-events-none'>I'm a Data Analyst with 5+ years turning messy financial, healthcare, and retail data into decisions, from fraud detection at JPMorgan Chase to end-to-end analytics platforms I ship to production.</p>
             <Button 
               className='md:w-80 md:h-16 w-60 h-12'
               id="button"

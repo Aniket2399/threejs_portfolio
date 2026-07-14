@@ -10,7 +10,7 @@ const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   
   const handleCopy = () => {
-    navigator.clipboard.writeText('kshirsagaraniket.work@gmail.com')
+    navigator.clipboard.writeText('aniket.kshirsagar.work08@gmail.com')
     setHasCopied(true);
 
     setTimeout(() => {
@@ -28,7 +28,7 @@ const About = () => {
             <img src='/images/grid_1.png' alt='grid-1' className='w-full sm:h-[276px] h-fit object-contain'/>
             <div>
               <p className='grid-headtext'>Hi, I'm Aniket</p>
-              <p className='grid-subtext'>With 5 years of Experience in Full Stack Development, I have worked on a wide range of projects and technologies.</p>
+              <p className='grid-subtext'>Data Analyst with 5+ years across banking, healthcare, and retail. I turn raw data into decisions using SQL, Python, Tableau, and Power BI.</p>
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@ const About = () => {
             <img src='/images/grid2.png' alt='grid-2' className='w-full sm:h-[276px] h-fit object-contain justify-center items-center'/>
             <div>
               <p className='grid-headtext'>Tech Stack</p>
-              <p className='grid-subtext'>I have experience with a wide range of technologies, including React, Next.js, Node.js, Express.js, MongoDB, etc.</p>
+              <p className='grid-subtext'>SQL, Python (Pandas, NumPy), Tableau, Power BI, AWS (Redshift, Glue), Azure Data Factory, dbt, and Spark.</p>
             </div>
           </div>
         </div>
@@ -62,14 +62,12 @@ const About = () => {
             </div>
             <div>
               <p className='grid-headtext'>
-                I work remotely across most timezones .
+                I collaborate across US timezones.
               </p>
               <p className='grid-subtext'>
-                I'm based in USA, with remote working available.
+                Based in New Jersey, USA. Open to remote and hybrid roles.
               </p>
-              <a>
               <Button1 href="#contact" name='Contact Me' isBeam containerClass='w-full mt-20' />
-              </a>
             </div>
           </div>
         </div>
@@ -78,12 +76,12 @@ const About = () => {
             <img src='/images/grid3.png' alt='grid-3' className='w-full sm:h-[266px] h-fit object-contain'/>
             <div>
               <p className='grid-headtext'>
-                My Passion for Coding
+                What Drives Me
               </p>
               <p className='grid-subtext'>
-                I love solving problems and creating innovative solutions.
-                I enjoy turning ideas into functional, user-friendly applications.
-                Learning new technologies and improving my skills excites me every day.
+                I love finding the story hidden in data: catching fraud patterns,
+                forecasting demand, and building dashboards people actually use to decide.
+                Learning new tools and sharpening my analysis excites me every day.
               </p>
             </div>
           </div>
@@ -97,7 +95,7 @@ const About = () => {
               </p>
              <div className='copy-container' onClick={handleCopy}>
               <img src={hasCopied ? 'images/tick.svg' : 'images/copy.svg'} alt='copy'/>
-              <p className='lg:text-xl md:text-xl font-medium text-gray_gradient text-white'>kshirsagaraniket.work@gmail.com</p>
+              <p className='lg:text-xl md:text-xl font-medium text-gray_gradient text-white'>aniket.kshirsagar.work08@gmail.com</p>
             </div>
           </div>
         </div>

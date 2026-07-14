@@ -17,11 +17,11 @@ const LogoSection = () => {
 
         <div className='marquee h-52'>
           <div className='marquee-box md:gap-12 gap-5 grayscale'>
-            {logoIconsList.map((icon) => (
-              <LogoIcon key={icon.name} icon={icon}/>
+            {logoIconsList.map((icon, index) => (
+              <LogoIcon key={`a-${index}`} icon={icon}/>
             ))}
-            {logoIconsList.map((icon) => (
-              <LogoIcon key={icon.name} icon={icon}/>
+            {logoIconsList.map((icon, index) => (
+              <LogoIcon key={`b-${index}`} icon={icon}/>
             ))}
           </div>
         </div>
