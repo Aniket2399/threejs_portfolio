@@ -1,109 +1,78 @@
-import React from 'react'
-import Globe from 'react-globe.gl'
-import Button1 from '../components/Button1'
-import { useState } from 'react'
-
-
+import { useState } from "react";
+import { education, profile } from "../constants";
 
 const About = () => {
+  const [copied, setCopied] = useState(false);
 
-  const [hasCopied, setHasCopied] = useState(false);
-  
-  const handleCopy = () => {
-    navigator.clipboard.writeText('aniket.kshirsagar.work08@gmail.com')
-    setHasCopied(true);
+  const copyEmail = () => {
+    navigator.clipboard.writeText(profile.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  }
-  
   return (
-    <section id='about' className='c-space my-20 text'>
-    <div className='w-full text-white-600'>
-    <h3 className='head-text'>About Me</h3>
-      <div className='mt-5 grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full'>
-        <div className='col-span-1 xl:row-span-3'>
-          <div className='grid-container'>
-            <img src='/images/grid_1.png' alt='grid-1' className='w-full sm:h-[276px] h-fit object-contain'/>
-            <div>
-              <p className='grid-headtext'>Hi, I'm Aniket</p>
-              <p className='grid-subtext'>Data Analyst with 5+ years across banking, healthcare, and retail. I turn raw data into decisions using SQL, Python, Tableau, and Power BI.</p>
-            </div>
-          </div>
-        </div>
+    <section id="about" className="section">
+      <div className="wrap">
+        <h2 className="section-title">About</h2>
+        <p className="section-note">Who I am and where I studied.</p>
 
-        <div className='col-span-1 xl:row-span-3'>
-          <div className='grid-container '>
-            <img src='/images/grid2.png' alt='grid-2' className='w-full sm:h-[276px] h-fit object-contain justify-center items-center'/>
-            <div>
-              <p className='grid-headtext'>Tech Stack</p>
-              <p className='grid-subtext'>SQL, Python (Pandas, NumPy), Tableau, Power BI, AWS (Redshift, Glue), Azure Data Factory, dbt, and Spark.</p>
-            </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
+            <img
+              src="/images/mine.jpg"
+              alt={profile.name}
+              className="shot mb-3"
+              style={{ maxWidth: 200 }}
+            />
+            <p className="font-bold text-[15px]">{profile.name}</p>
+            <p className="small muted">{profile.role}</p>
+            <p className="small muted">{profile.location}</p>
           </div>
-        </div>
 
-        <div className='col-span-1 xl:row-span-3'>
-          <div className='grid-container'>
-            <div className='rounded-3xl w-full sm:h-[326px] h-fit flex items-center justify-center'>
-              <Globe 
-                height={326}
-                width={326}
-                backgroundColor="rgba(0,0,0,0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGraticules
-                showLand
-                showOcean
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                
-              />
-            </div>
-            <div>
-              <p className='grid-headtext'>
-                I collaborate across US timezones.
-              </p>
-              <p className='grid-subtext'>
-                Based in New Jersey, USA. Open to remote and hybrid roles.
-              </p>
-              <Button1 href="#contact" name='Contact Me' isBeam containerClass='w-full mt-20' />
-            </div>
-          </div>
-        </div>
-        <div className='xl:col-span-2 xl:row-span-3'>
-          <div className='grid-container'>
-            <img src='/images/grid3.png' alt='grid-3' className='w-full sm:h-[266px] h-fit object-contain'/>
-            <div>
-              <p className='grid-headtext'>
-                What Drives Me
-              </p>
-              <p className='grid-subtext'>
-                I love finding the story hidden in data: catching fraud patterns,
-                forecasting demand, and building dashboards people actually use to decide.
-                Learning new tools and sharpening my analysis excites me every day.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className='xl:col-span-1 xl:row-span-2'>
-          <div className='grid-container'>
-            <img src='/images/grid4.png' alt='grid-4' className='w-full md:h-[276px] sm:h-[176px] h-fit object-cover sm:object-top '/>
-            <div className='space-y-4'>
-              <p className='grid-headtext text-center'>
-                Contact Me
-              </p>
-             <div className='copy-container' onClick={handleCopy}>
-              <img src={hasCopied ? 'images/tick.svg' : 'images/copy.svg'} alt='copy'/>
-              <p className='lg:text-xl md:text-xl font-medium text-gray_gradient text-white'>aniket.kshirsagar.work08@gmail.com</p>
+          <div className="md:col-span-2">
+            <p className="lead">
+              I like finding the story hidden in data: catching fraud patterns, forecasting demand,
+              and building dashboards people actually use to decide. Clean data and a clear answer
+              beat a fancy chart every time.
+            </p>
+            <p className="lead muted mt-3">
+              I have worked across banking fraud analytics at JP Morgan Chase, healthcare reporting
+              at Capgemini, and retail forecasting at Accenture. On the side I build analytics
+              platforms end to end, which is where the SQL, dbt, DuckDB, and dashboard work in my
+              projects comes from.
+            </p>
+
+            <h3 className="text-[13px] font-bold mt-7 mb-2">Education</h3>
+            {education.map((ed) => (
+              <div key={ed.school} className="leader small">
+                <span className="font-bold">{ed.degree}</span>
+                <span className="muted">{ed.school}</span>
+                <span className="leader-fill" />
+                <span className="muted">
+                  {ed.date}, {ed.note}
+                </span>
+              </div>
+            ))}
+
+            <h3 className="text-[13px] font-bold mt-6 mb-2">Certification</h3>
+            <p className="small muted">
+              INSPIRE (International Student Professional Readiness Education) Program, Pace
+              University, Nov 2024
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-7">
+              <a href={profile.cv} target="_blank" rel="noreferrer" className="btn btn-primary">
+                Download CV
+              </a>
+              <button type="button" onClick={copyEmail} className="btn">
+                {copied ? "Email copied" : "Copy email"}
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

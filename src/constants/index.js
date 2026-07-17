@@ -1,276 +1,178 @@
+// Content source of truth: career-ops cv.md + config/profile.yml
+// House style: no em-dashes, curly quotes, arrows, or ellipsis anywhere.
+
+const profile = {
+  name: "Aniket Kshirsagar",
+  role: "Data Analyst",
+  location: "New Jersey, USA",
+  email: "aniket.kshirsagar.work08@gmail.com",
+  linkedin: "https://linkedin.com/in/aniketk99",
+  github: "https://github.com/Aniket2399",
+  cv: "/Aniket-Kshirsagar-CV.pdf",
+  blurb:
+    "Data Analyst with 5+ years turning messy financial, healthcare, and retail data into decisions. I work in SQL, Python, Tableau, and Power BI, with depth in fraud and anomaly analysis, ETL, and forecasting.",
+  blurb2:
+    "Currently at JP Morgan Chase on transaction fraud analytics. I also build and ship end-to-end analytics platforms of my own, and recently started building LLM-based AI agents.",
+};
+
 const navLinks = [
-  {
-    name: "About Me",
-    link: "#about",
-  },
-
-  {
-    name: "Projects",
-    link: "#projects",
-  },
-  {
-    name: "Experience",
-    link: "#experience",
-  },
-  {
-    name: "Skills",
-    link: "#skills",
-  },
-
+  { name: "Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
+  { name: "Skills", link: "#skills" },
+  { name: "About", link: "#about" },
 ];
 
-const words = [
-  { text: "Data", imgPath: "/images/code.svg" },
-  { text: "Insights", imgPath: "/images/ideas.svg" },
-  { text: "Signals", imgPath: "/images/concepts.svg" },
-  { text: "Dashboards", imgPath: "/images/designs.svg" },
-  { text: "Data", imgPath: "/images/code.svg" },
-  { text: "Insights", imgPath: "/images/ideas.svg" },
-  { text: "Signals", imgPath: "/images/concepts.svg" },
-  { text: "Dashboards", imgPath: "/images/designs.svg" },
+const metrics = [
+  { value: "5+", label: "years in analytics" },
+  { value: "28%", label: "fraud detection accuracy gain" },
+  { value: "18%", label: "demand forecast precision gain" },
+  { value: "3", label: "industries: banking, health, retail" },
 ];
 
-const counterItems = [
-  { value: 5, suffix: "+", label: "Years in Analytics" },
-  { value: 3, suffix: "", label: "Industries: Banking, Health, Retail" },
-  { value: 28, suffix: "%", label: "Fraud Detection Accuracy Gain" },
-  { value: 18, suffix: "%", label: "Demand Forecast Precision Gain" },
+const heroTools = [
+  "SQL",
+  "Python",
+  "pandas",
+  "Tableau",
+  "Power BI",
+  "AWS",
+  "Azure",
+  "dbt",
+  "Spark",
 ];
 
-const logoIconsList = [
+const featuredProjects = [
   {
-    imgPath: "/images/logos/power-bi.png",
-  },
-  {
-    imgPath: "/images/logos/tableau-logo-1.svg",
-  },
-  {
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    imgPath: "/images/logos/microsoft-azure-2.svg",
-  },
-  {
-    imgPath: "/images/logos/google-analytics-2.svg",
-  },
-  {
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    imgPath: "/images/logos/docker.png",
-  },
-  {
-    imgPath: "/images/logos/git.svg",
-  },
-];
-
-const abilities = [
-  {
-    imgPath: "/images/seo.png",
-    title: "Decisions, Not Just Charts",
-    desc: "Turning raw data into answers stakeholders can act on the same day.",
-  },
-  {
-    imgPath: "/images/chat.png",
-    title: "Cross-Domain Range",
-    desc: "Fluent across banking fraud, healthcare, and retail forecasting.",
-  },
-  {
-    imgPath: "/images/time.png",
-    title: "Trustworthy Data",
-    desc: "Data quality, validation, and governance built into every pipeline.",
-  },
-];
-
-const techStackImgs = [
-  {
-    name: "Python & Pandas",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Tableau",
-    imgPath: "/images/logos/tableau-logo-1.svg",
-  },
-  {
-    name: "Power BI",
-    imgPath: "/images/logos/power-bi.png",
-  },
-  {
-    name: "AWS Data Stack",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Azure Data Factory",
-    imgPath: "/images/logos/microsoft-azure-2.svg",
-  },
-];
-
-const techStackIcons = [
-  {
-    name: "Python & Pandas",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "AWS Data Stack",
-    modelPath: "/models/aws_logo.glb",
-    scale: 0.3,
-    rotation: [0, -Math.PI / 4, 0],
-  },
-  {
-    name: "React Dashboards",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Interactive Data Viz",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Git & GitHub",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
-];
-
-const expCards = [
-  {
-    review: "Aniket pairs deep SQL and Python skills with a sharp eye for fraud patterns, turning noisy transaction data into decisions the risk team can trust.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/jpmc.svg",
-    title: "Data Analyst, JP Morgan Chase",
-    date: "September 2024 - Present",
-    responsibilities: [
-      "Analyzed large-scale financial transaction data in SQL to surface suspicious activity across banking channels.",
-      "Built Python anomaly-detection logic, improving fraud detection accuracy by 28% and cutting false positives.",
-      "Shipped Tableau dashboards for fraud trends, reducing manual investigation effort by 22%.",
+    name: "Soccer PepStats",
+    tagline: "End-to-end football analytics platform",
+    image: "/images/pepstats.png",
+    stack: "Python, pandas, DuckDB, FastAPI, React/TypeScript",
+    live: "https://pep-stats-analytics.vercel.app",
+    code: "https://github.com/Aniket2399/Pep_Stats_Analytics",
+    bullets: [
+      "Transformed ~1.3M raw StatsBomb events into a 12-tab dashboard covering a full La Liga season: 380 matches, 9,168 shots with xG, 546 player-seasons with league-wide percentiles.",
+      "Built a Lambda architecture: a batch layer producing an immutable events master plus 3 analytics marts, and a speed layer scraping live data with a 45s TTL cache and last-good fallback.",
+      "Unified both layers in DuckDB behind a read-only FastAPI service (11 endpoints), gated by 60+ automated tests with CI/CD on every push.",
     ],
   },
   {
-    review: "Aniket took our AI agents from experiments to production, and built the dashboard our whole team now uses to run them.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/astoria.svg",
-    title: "AI Engineer, Astoria AI",
-    date: "September 2025 - February 2026",
-    responsibilities: [
+    name: "COURTSIDE",
+    tagline: "End-to-end NBA analytics platform",
+    image: "/images/courtside.png",
+    stack: "Python, DuckDB, dbt, React/TypeScript",
+    live: "https://courtside-nba-analytics.vercel.app",
+    code: "https://github.com/Aniket2399/nba-data-analytics",
+    bullets: [
+      "Turned 2.2 GB of raw basketball data (65K+ games, 13.5M play-by-play events, 77 years of history) into a 6-page interactive dashboard.",
+      "Modeled 16 source feeds into 9 analytics-ready marts using a medallion pattern with dbt transformations on DuckDB.",
+      "Enforced data quality with automated tests on every transformation and deployed the full system to production.",
+    ],
+  },
+];
+
+const otherProjects = [
+  {
+    name: "GradEase",
+    note: "MERN graduation store with an AI chatbot",
+    code: "https://github.com/Aniket2399/Grad-Ease",
+  },
+];
+
+const experience = [
+  {
+    company: "JP Morgan Chase",
+    role: "Data Analyst",
+    place: "New Jersey, USA",
+    date: "Sep 2024 to Present",
+    bullets: [
+      "Analyzed large-scale transaction datasets in SQL to surface suspicious activity across multiple banking channels.",
+      "Built anomaly detection logic in Python and tuned rule-based models, improving fraud detection accuracy by 28% and cutting false positives.",
+      "Shipped Tableau dashboards for fraud trends and alert volumes, reducing manual investigation effort by 22%.",
+      "Used AWS (S3, Redshift, Athena, Glue) for scalable processing, contributing to a 15% cut in fraud-related exposure.",
+    ],
+  },
+  {
+    company: "Astoria AI",
+    role: "AI Engineer (Part-Time)",
+    place: "New York, USA (Remote)",
+    date: "Sep 2025 to Feb 2026",
+    bullets: [
       "Built and deployed LLM-based AI agents, taking them from prototypes to running services.",
-      "Designed a unified agent dashboard with drag-and-drop cards to monitor and operate every agent.",
-      "Developed a scheduler-driven recruiting pipeline with OAuth 2.0-secured APIs.",
+      "Designed a unified dashboard with drag-and-drop agent cards to monitor and operate every agent in one view.",
+      "Developed a scheduler-driven recruiting pipeline with OAuth 2.0 secured APIs.",
     ],
   },
   {
-    review: "Aniket automated our healthcare reporting and rebuilt the ETL behind it, saving the team days of manual work every cycle.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/capgemini.svg",
-    title: "Data Analyst, Capgemini",
-    date: "January 2022 - July 2023",
-    responsibilities: [
-      "Automated recurring healthcare reporting in Power BI, cutting manual effort by ~28%.",
-      "Engineered Azure Data Factory ETL pipelines into analytics-ready datasets under PHI governance.",
-      "Built Tableau dashboards and Python cohort models to guide higher-risk patient interventions.",
-    ],
-  },
-];
-
-const expLogos = [
-  {
-    name: "logo1",
-    imgPath: "/images/jpmc.svg",
-  },
-  {
-    name: "logo2",
-    imgPath: "/images/astoria.svg",
-  },
-  {
-    name: "logo3",
-    imgPath: "/images/capgemini.svg",
-  },
-];
-
-const socialImgs = [
-  {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
-    url: "https://linkedin.com/in/aniketk99",
-  },
-  {
-    name: "github",
-    imgPath: "/images/github.svg",
-    url: "https://github.com/Aniket2399",
-  },
-];
-
-const workExperiences = [
-  {
-    id: 1,
-    name: 'JP Morgan Chase - NJ, USA',
-    pos: 'Data Analyst',
-    duration: 'Sep 2024 - Present',
-    icon: '/images/jpmc.svg',
-    responsibilities: [
-      "Analyzed large-scale financial transaction data in SQL to surface suspicious activity and support enterprise fraud monitoring.",
-      "Built Python anomaly-detection logic and tuned rule-based models, improving fraud detection accuracy by 28% while cutting false positives.",
-      "Shipped interactive Tableau dashboards for fraud trends and alert volumes, reducing manual investigation effort by 22%.",
-    ],
-    animation: 'rally',
-  },
-  {
-    id: 2,
-    name: 'Astoria AI - NY, USA (Remote)',
-    pos: 'AI Engineer (Part-Time)',
-    duration: 'Sep 2025 - Feb 2026',
-    icon: '/images/astoria.svg',
-    responsibilities: [
-      "Built and deployed LLM-based AI agents, taking them from prototypes to running, usable services.",
-      "Designed a unified dashboard with drag-and-drop agent cards to monitor and operate all agents in one view.",
-      "Developed an automated, scheduler-driven candidate-recruiting pipeline with OAuth 2.0-secured APIs.",
-    ],
-    icon2: '/images/astoria.svg',
-    animation: 'salute',
-  },
-  {
-    id: 3,
-    name: 'Capgemini - India',
-    pos: 'Data Analyst',
-    duration: 'Jan 2022 - July 2023',
-    responsibilities: [
-      "Automated recurring healthcare reporting in Power BI, cutting manual effort by ~28% and improving delivery consistency.",
+    company: "Capgemini",
+    role: "Data Analyst",
+    place: "India",
+    date: "Jan 2022 to Jul 2023",
+    bullets: [
+      "Automated recurring healthcare reporting in Power BI, cutting manual effort by roughly 28%.",
       "Engineered Azure Data Factory ETL pipelines consolidating disparate healthcare sources into analytics-ready datasets.",
-      "Built Tableau dashboards and Python cohort models for patient engagement under PHI governance.",
+      "Ran patient segmentation and cohort modeling in Python to target higher-risk populations, under PHI governance.",
     ],
-    icon: '/images/capgemini.svg',
-    animation: 'fist',
   },
   {
-    id: 4,
-    name: 'Accenture - India',
-    pos: 'Data Analyst',
-    duration: 'Aug 2019 - Dec 2021',
-    icon: '/images/accenture.svg',
-    responsibilities: [
-      "Built Python time-series demand-forecasting models, increasing prediction precision by 18% and improving inventory planning.",
+    company: "Accenture",
+    role: "Data Analyst",
+    place: "India",
+    date: "Aug 2019 to Dec 2021",
+    bullets: [
+      "Built time-series demand forecasting models in Python, increasing prediction precision by 18%.",
       "Mined historical sales with SQL to surface seasonal demand, reducing stockouts by 15%.",
-      "Delivered Power BI KPI dashboards for inventory turnover and replenishment, speeding stakeholder decisions by 25%.",
+      "Delivered Power BI KPI dashboards for inventory turnover, speeding stakeholder decisions by 25%.",
+      "Ran A/B tests on replenishment strategies, cutting excess inventory by 12%.",
     ],
-    animation: 'rally',
   },
+];
+
+const skills = [
+  { group: "Languages", items: ["Python", "SQL", "R"] },
+  { group: "BI and Viz", items: ["Tableau", "Power BI", "Looker", "Matplotlib", "Seaborn"] },
+  { group: "Data", items: ["pandas", "NumPy", "Excel (Advanced)", "Power Query"] },
+  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQL Server", "Oracle"] },
+  {
+    group: "Cloud and Big Data",
+    items: ["AWS (S3, Redshift, Athena, Glue)", "Azure", "BigQuery", "PySpark", "Hive"],
+  },
+  { group: "ETL and Modeling", items: ["Azure Data Factory", "dbt", "DuckDB", "ETL pipelines"] },
+  {
+    group: "Statistics",
+    items: ["Hypothesis testing", "Regression", "A/B testing", "Forecasting"],
+  },
+  { group: "Other", items: ["Ravelin", "LLM AI agents", "Git", "Jira", "Agile"] },
+];
+
+const education = [
+  {
+    school: "Pace University, New York",
+    degree: "MS, Computer Science",
+    date: "May 2025",
+    note: "GPA 3.5/4",
+  },
+  {
+    school: "Savitribai Phule University, Pune",
+    degree: "BS, Computer Science",
+    date: "Aug 2021",
+    note: "GPA 3.4/4",
+  },
+];
+
+const socials = [
+  { name: "GitHub", url: "https://github.com/Aniket2399" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/aniketk99" },
 ];
 
 export {
-  words,
-  abilities,
-  logoIconsList,
-  counterItems,
-  expCards,
-  expLogos,
-  socialImgs,
-  techStackIcons,
-  techStackImgs,
+  profile,
   navLinks,
-  workExperiences,
+  metrics,
+  heroTools,
+  featuredProjects,
+  otherProjects,
+  experience,
+  skills,
+  education,
+  socials,
 };

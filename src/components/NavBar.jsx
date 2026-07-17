@@ -1,46 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { navLinks } from '../constants'
+import { navLinks, profile } from "../constants";
 
 const NavBar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10
-      setScrolled(isScrolled);
-    }
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  },[])
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
-      <div className='inner'>
-        <a className='logo' href='#hero'>Aniket | Kshirsagar</a>
-        <nav className='desktop'>
-          <ul>
-            {navLinks.map(({link, name}) => (
-              <li key={name} className='group'>
-                <a href={link}>
-                  <span>{name}</span>
-                  <span className='underline'/>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <a href='#contact' className='contact-btn group'>
-          <div className='inner'>
-            <span>Contact Me</span>
-          </div>
+    <header className="nav">
+      <div className="wrap nav-inner">
+        <a href="#top" className="font-bold text-[14px]">
+          {profile.name}
         </a>
+        <nav className="nav-links">
+          {navLinks.map(({ link, name }) => (
+            <a key={name} href={link} className="hide-sm">
+              {name}
+            </a>
+          ))}
+          <a href={profile.cv} target="_blank" rel="noreferrer">
+            CV
+          </a>
+          <a href="#contact" className="btn btn-primary">
+            Contact
+          </a>
+        </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

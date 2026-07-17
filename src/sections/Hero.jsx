@@ -1,75 +1,48 @@
-import Button from '../components/Button'
-import HeroExperience from '../components/HeroModels/HeroExperience'
-import { words } from '../constants'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap';
+import { heroTools, metrics, profile } from "../constants";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo('.hero-text h1',
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power2.inout'
-      }
-
-
-    )
-  })
   return (
-    <section id='hero' className='relative overflow-hidden'>
-      <div className='absolute top-0 left-0 z-0'>
-        <img src='/images/bg.png' alt='background'/>
-      </div>
+    <section id="top" className="section">
+      <div className="wrap">
+        <p className="small muted mb-3">{profile.location}</p>
+        <h1 className="h1">{profile.role}</h1>
 
-      <div className='hero-layout'>
-        {/*Left Side*/}
-        <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
-          <div className='flex flex-col gap-7'>
-            <div className='hero-text'>
-              <h1>
-                Turning
-                <span className='slide'>
-                  <span className='wrapper'>
-                    {words.map((word, index) => (
-                      <span key={`${word.text}-${index}`} className='flex items-center md:gap-3 gap-1 pb-2'>
-                        <img
-                          src={word.imgPath} alt={word.text} className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50'
-                        />
-                        <span>{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span>
-              </h1>
-              <h1>into Decisions that</h1>
-              <h1>Move the Business</h1>
+        <div className="mt-6 flex flex-col gap-4">
+          <p className="lead">{profile.blurb}</p>
+          <p className="lead muted">{profile.blurb2}</p>
+        </div>
+
+        <div className="tools mt-7">
+          {heroTools.map((t) => (
+            <span key={t} className="tool">
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap gap-3 mt-8">
+          <a href="#projects" className="btn btn-primary">
+            View Projects
+          </a>
+          <a href={profile.cv} target="_blank" rel="noreferrer" className="btn">
+            Download CV
+          </a>
+          <a href="#contact" className="btn">
+            Get in Touch
+          </a>
+        </div>
+
+        <div className="metrics mt-10">
+          {metrics.map((m) => (
+            <div key={m.label} className="metric">
+              <div className="metric-value">{m.value}</div>
+              <div className="metric-label">{m.label}</div>
             </div>
-            <p className='text-white-50 md:text-xl relative z-10 pointer-events-none'>I'm a Data Analyst with 5+ years turning messy financial, healthcare, and retail data into decisions, from fraud detection at JPMorgan Chase to end-to-end analytics platforms I ship to production.</p>
-            <Button 
-              className='md:w-80 md:h-16 w-60 h-12'
-              id="button"
-              text="See My Work"
-            />
-          </div>
-        </header>
-
-        {/*Right Side*/}
-        <figure>
-          <div className='hero-3d-layout'>
-            <HeroExperience />
-          </div>
-        </figure>
+          ))}
+        </div>
       </div>
-      
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
