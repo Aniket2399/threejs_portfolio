@@ -13,9 +13,12 @@ const Projects = () => {
           {featuredProjects.map((p) => (
             <article key={p.name} className="card ticked">
               <div className="grid md:grid-cols-2 gap-6 items-start">
-                <a href={p.live} target="_blank" rel="noreferrer">
-                  <img src={p.image} alt={`${p.name} dashboard`} className="shot" />
-                </a>
+                <div>
+                  <a href={p.live} target="_blank" rel="noreferrer">
+                    <img src={p.image} alt={`${p.name} dashboard`} className="shot" />
+                  </a>
+                  {p.caption && <p className="small muted mt-2">{p.caption}</p>}
+                </div>
 
                 <div>
                   <h3 className="text-[19px] font-bold">{p.name}</h3>

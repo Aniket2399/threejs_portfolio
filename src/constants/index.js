@@ -46,6 +46,8 @@ const featuredProjects = [
     name: "Soccer PepStats",
     tagline: "End-to-end football analytics platform",
     image: "/images/pepstats.png",
+    caption:
+      "Players view: per-player movement heatmap built from 640 touch points, with zone occupation and match filters.",
     stack: "Python, pandas, DuckDB, FastAPI, React/TypeScript",
     live: "https://pep-stats-analytics.vercel.app",
     code: "https://github.com/Aniket2399/Pep_Stats_Analytics",
@@ -59,6 +61,8 @@ const featuredProjects = [
     name: "COURTSIDE",
     tagline: "End-to-end NBA analytics platform",
     image: "/images/courtside.png",
+    caption:
+      "Players view: shot zone map with real FG% per zone, plus shot selection and efficiency, all derived from play-by-play.",
     stack: "Python, DuckDB, dbt, React/TypeScript",
     live: "https://courtside-nba-analytics.vercel.app",
     code: "https://github.com/Aniket2399/nba-data-analytics",
