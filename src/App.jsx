@@ -8,6 +8,7 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import CV from "./sections/CV";
+import Work from "./sections/Work";
 
 const App = () => {
   const [route, setRoute] = useState(window.location.hash);
@@ -15,15 +16,16 @@ const App = () => {
   useEffect(() => {
     const onHash = () => {
       setRoute(window.location.hash);
-      if (window.location.hash === "#cv") window.scrollTo(0, 0);
+      if (window.location.hash === "#cv" || window.location.hash === "#work") {
+        window.scrollTo(0, 0);
+      }
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  if (route === "#cv") {
-    return <CV />;
-  }
+  if (route === "#cv") return <CV />;
+  if (route === "#work") return <Work />;
 
   return (
     <>

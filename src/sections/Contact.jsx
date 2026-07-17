@@ -38,87 +38,93 @@ const Contact = () => {
       <div className="wrap">
         <h2 className="section-title">Contact</h2>
         <p className="section-note">
-          Hiring for a data or analytics role, or want a closer look at one of these dashboards? Send
-          a note.
+          Hiring for a data or analytics role, or want a closer look at a dashboard? Send a note.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div>
-            <div className="leader small">
-              <span className="font-bold">Email</span>
-              <span className="leader-fill" />
-              <a href={`mailto:${profile.email}`} className="link">
-                {profile.email}
-              </a>
+        <div className="grid md:grid-cols-2 gap-6 items-start">
+          {/* Left card: reach me */}
+          <div className="ticked">
+            <div className="card-head">Reach me</div>
+            <div className="card-body">
+              <div className="leader small">
+                <span className="font-bold">Email</span>
+                <span className="leader-fill" />
+                <a href={`mailto:${profile.email}`} className="link">
+                  {profile.email}
+                </a>
+              </div>
+              <div className="leader small">
+                <span className="font-bold">LinkedIn</span>
+                <span className="leader-fill" />
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="link">
+                  /in/aniketk99
+                </a>
+              </div>
+              <div className="leader small">
+                <span className="font-bold">GitHub</span>
+                <span className="leader-fill" />
+                <a href={profile.github} target="_blank" rel="noreferrer" className="link">
+                  /Aniket2399
+                </a>
+              </div>
+              <div className="leader small">
+                <span className="font-bold">Location</span>
+                <span className="leader-fill" />
+                <span className="muted">{profile.location}</span>
+              </div>
+              <p className="small muted mt-4">
+                Open to remote and hybrid roles, and on-site in the NJ/NYC metro.
+              </p>
             </div>
-            <div className="leader small">
-              <span className="font-bold">LinkedIn</span>
-              <span className="leader-fill" />
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" className="link">
-                /in/aniketk99
-              </a>
-            </div>
-            <div className="leader small">
-              <span className="font-bold">GitHub</span>
-              <span className="leader-fill" />
-              <a href={profile.github} target="_blank" rel="noreferrer" className="link">
-                /Aniket2399
-              </a>
-            </div>
-            <div className="leader small">
-              <span className="font-bold">Location</span>
-              <span className="leader-fill" />
-              <span className="muted">{profile.location}</span>
-            </div>
-            <p className="small muted mt-4">
-              Open to remote and hybrid roles, and on-site in the NJ/NYC metro.
-            </p>
           </div>
 
-          <div className="card ticked" style={{ padding: 0 }}>
+          {/* Right card: message form */}
+          <div className="ticked">
             <div className="card-head">Send a message</div>
-            <form ref={formRef} onSubmit={handleSubmit} className="p-5 flex flex-col gap-4">
-              <label>
-                <span className="field-label">Name</span>
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  className="field"
-                  required
-                  placeholder="Your name"
-                />
-              </label>
-              <label>
-                <span className="field-label">Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  className="field"
-                  required
-                  placeholder="you@company.com"
-                />
-              </label>
-              <label>
-                <span className="field-label">Message</span>
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  className="field"
-                  required
-                  rows={5}
-                  placeholder="Hi Aniket, we are hiring for..."
-                />
-              </label>
-              <button type="submit" className="btn btn-primary" disabled={loading}>
-                {loading ? "Sending..." : "Send"}
-              </button>
-              {status && <p className="small muted">{status}</p>}
-            </form>
+            <div className="card-body">
+              <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <label>
+                  <span className="field-label">Name</span>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className="field"
+                    required
+                    placeholder="Your name"
+                  />
+                </label>
+                <label>
+                  <span className="field-label">Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="field"
+                    required
+                    placeholder="you@company.com"
+                  />
+                </label>
+                <label>
+                  <span className="field-label">Message</span>
+                  <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    className="field"
+                    required
+                    rows={5}
+                    placeholder="Hi Aniket, we are hiring for..."
+                  />
+                </label>
+                <button type="submit" className="btn btn-primary" disabled={loading}>
+                  {loading ? "Sending..." : "Send"}
+                </button>
+                {status && <p className="small muted">{status}</p>}
+              </form>
+            </div>
           </div>
         </div>
       </div>

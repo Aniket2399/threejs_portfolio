@@ -8,6 +8,7 @@ import {
   certifications,
   achievements,
 } from "../constants";
+import ThemeToggle from "../components/ThemeToggle";
 
 const CV = () => {
   const projects = [
@@ -39,6 +40,7 @@ const CV = () => {
             <a href={profile.cv} target="_blank" rel="noreferrer" className="btn btn-primary">
               Download PDF
             </a>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
