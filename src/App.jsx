@@ -8,6 +8,7 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import CV from "./sections/CV";
 import ProjectsPage from "./sections/ProjectsPage";
+import ProjectDetail from "./sections/ProjectDetail";
 import ExperiencePage from "./sections/ExperiencePage";
 
 const PAGES = { "#cv": CV, "#projects": ProjectsPage, "#experience": ExperiencePage };
@@ -19,11 +20,15 @@ const App = () => {
     const onHash = () => {
       const hash = window.location.hash;
       setRoute(hash);
-      if (PAGES[hash]) window.scrollTo(0, 0);
+      if (PAGES[hash] || hash.startsWith("#project-")) window.scrollTo(0, 0);
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
+
+  if (route.startsWith("#project-")) {
+    return <ProjectDetail slug={route.replace("#project-", "")} />;
+  }
 
   const Page = PAGES[route];
   if (Page) return <Page />;

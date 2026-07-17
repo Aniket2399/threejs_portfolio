@@ -46,32 +46,52 @@ const heroTools = [
 const featuredProjects = [
   {
     name: "Soccer PepStats",
+    slug: "soccer-pepstats",
     tagline: "End-to-end football analytics platform",
-    image: "/images/pepstats.png",
-    caption:
-      "Players view: per-player movement heatmap built from 640 touch points, with zone occupation and match filters.",
+    insight: "1.3M raw match events turned into a live scouting dashboard.",
     stack: "Python, pandas, DuckDB, FastAPI, React/TypeScript",
     live: "https://pep-stats-analytics.vercel.app",
     code: "https://github.com/Aniket2399/Pep_Stats_Analytics",
+    description: [
+      "PepStats is an end-to-end football analytics platform built on a Lambda architecture. A batch layer ingests, cleans, and models roughly 1.3M StatsBomb events from a full La Liga 2015/16 season into an immutable events master plus three analytics marts. A speed layer scrapes live data with a 45s TTL cache and a last-good fallback, so the dashboard stays responsive even when a source is down.",
+      "Both layers are unified in a single DuckDB store exposed through a read-only FastAPI service with 11 endpoints and OpenAPI docs. The frontend is React 18, TypeScript, and Vite, with every chart hand-rolled in pure SVG (no charting library) for full control over the visuals.",
+      "The whole pipeline is gated by 60+ automated tests (pytest, Vitest). The API is Dockerized on Render, the frontend deploys to Vercel with per-PR previews, and GitHub Actions runs CI on every push. A live World Cup 2026 mode reuses the same speed layer.",
+    ],
     bullets: [
-      "Transformed ~1.3M raw StatsBomb events into a 12-tab dashboard covering a full La Liga season: 380 matches, 9,168 shots with xG, 546 player-seasons with league-wide percentiles.",
-      "Built a Lambda architecture: a batch layer producing an immutable events master plus 3 analytics marts, and a speed layer scraping live data with a 45s TTL cache and last-good fallback.",
-      "Unified both layers in DuckDB behind a read-only FastAPI service (11 endpoints), gated by 60+ automated tests with CI/CD on every push.",
+      "1.3M StatsBomb events, a full La Liga season: 380 matches, 9,168 shots with xG, 546 player-seasons with league-wide percentiles.",
+      "Lambda architecture: immutable batch layer plus a resilient speed layer with a 45s TTL cache and last-good fallback.",
+      "DuckDB behind a read-only FastAPI service (11 endpoints), 60+ automated tests, Dockerized with CI/CD on every push.",
+    ],
+    shots: [
+      { src: "/images/pepstats-overview.png", cap: "Team overview: possession, shot outcomes, and top scorers." },
+      { src: "/images/pepstats-heatmap.png", cap: "Player movement heatmap from 640 touch points, with zone occupation." },
+      { src: "/images/pepstats-setpieces.png", cap: "Set pieces: goal-type breakdown and goals by match interval." },
+      { src: "/images/pepstats-trends.png", cap: "Trends: goals, xG, possession, and points by matchweek." },
     ],
   },
   {
     name: "COURTSIDE",
+    slug: "courtside",
     tagline: "End-to-end NBA analytics platform",
-    image: "/images/courtside.png",
-    caption:
-      "Players view: shot zone map with real FG% per zone, plus shot selection and efficiency, all derived from play-by-play.",
+    insight: "2.2GB of play-by-play modeled with dbt into an interactive dashboard.",
     stack: "Python, DuckDB, dbt, React/TypeScript",
     live: "https://courtside-nba-analytics.vercel.app",
     code: "https://github.com/Aniket2399/nba-data-analytics",
+    description: [
+      "COURTSIDE is an end-to-end NBA analytics platform that turns 2.2 GB of raw basketball data (65K+ games, 13.5M play-by-play events, 77 years of history) into a six-page interactive dashboard with advanced metrics and custom visualizations.",
+      "Sixteen source feeds are modeled into nine analytics-ready marts using a medallion pattern: Python and DuckDB handle ingestion, and dbt runs the modular transformations. The React 18 and TypeScript dashboard renders custom Scatter, Radar, Donut, and Area charts with no charting library.",
+      "Data quality is enforced with automated tests on every transformation, and the full system is deployed to production. Shot zones, player shot profiles, team ratings, and head-to-head comparisons are all derived directly from play-by-play.",
+    ],
     bullets: [
-      "Turned 2.2 GB of raw basketball data (65K+ games, 13.5M play-by-play events, 77 years of history) into a 6-page interactive dashboard.",
-      "Modeled 16 source feeds into 9 analytics-ready marts using a medallion pattern with dbt transformations on DuckDB.",
-      "Enforced data quality with automated tests on every transformation and deployed the full system to production.",
+      "2.2 GB of raw data (65K+ games, 13.5M play-by-play events, 77 years) into a 6-page interactive dashboard.",
+      "16 source feeds modeled into 9 analytics-ready marts with a dbt medallion pattern on DuckDB.",
+      "Custom Scatter, Radar, Donut, and Area charts with no charting library; automated tests on every transformation.",
+    ],
+    shots: [
+      { src: "/images/courtside-league.png", cap: "League overview: pace, shot mix, and net-rating leaders." },
+      { src: "/images/courtside-shotmap.png", cap: "Player shot-zone map with real FG% per zone, plus shot selection and efficiency." },
+      { src: "/images/courtside-teams.png", cap: "Team stats: ratings, point differential, and shot distribution." },
+      { src: "/images/courtside-compare.png", cap: "Compare players: radar overlay and head-to-head table." },
     ],
   },
 ];

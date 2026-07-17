@@ -401,6 +401,71 @@ body {
   filter: none;
 }
 
+/* ---------- file-tree projects view ---------- */
+
+.tree {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.tree-root {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.tree-node + .tree-node {
+  margin-top: 2px;
+}
+
+.tree-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.tree-branch {
+  color: var(--muted);
+  white-space: pre;
+  user-select: none;
+}
+
+.tree-folder {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.tree-folder:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tree-sub {
+  margin-left: 14px;
+  padding: 4px 0 20px 24px;
+  border-left: 1px solid var(--rule);
+}
+
+.tree-sub p {
+  margin: 2px 0;
+}
+
+.tree-sub-last {
+  border-left-color: transparent;
+}
+
+.tree-readmore {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tree-readmore:hover {
+  color: var(--amber);
+}
+
 /* ---------- CV page ---------- */
 
 .cv-h2 {

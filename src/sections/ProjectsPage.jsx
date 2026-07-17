@@ -21,44 +21,33 @@ const ProjectsPage = () => {
         <div className="wrap">
           <h1 className="section-title">Projects</h1>
           <p className="section-note">
-            Analytics platforms I built end to end, from raw data to a deployed dashboard.
+            Open a folder to read the full case study, with screenshots and detail.
           </p>
 
-          <div className="flex flex-col gap-12">
-            {featuredProjects.map((p) => (
-              <article key={p.name}>
-                <h2 className="text-[20px] font-bold">{p.name}</h2>
-                <p className="small muted">{p.tagline}</p>
+          <div className="tree">
+            <p className="tree-root">~/projects/</p>
 
-                <div className="tools mt-3">
-                  {p.stack.split(",").map((t) => (
-                    <span key={t} className="tool">
-                      {t.trim()}
-                    </span>
-                  ))}
+            {featuredProjects.map((p, i) => {
+              const last = i === featuredProjects.length - 1;
+              const href = `#project-${p.slug}`;
+              return (
+                <div className="tree-node" key={p.slug}>
+                  <div className="tree-line">
+                    <span className="tree-branch">{last ? "└──" : "├──"}</span>
+                    <a href={href} className="tree-folder">
+                      {p.slug}/
+                    </a>
+                  </div>
+                  <div className={`tree-sub ${last ? "tree-sub-last" : ""}`}>
+                    <p>{p.tagline}</p>
+                    <p className="muted">{p.insight}</p>
+                    <a href={href} className="tree-readmore">
+                      [ read more ]
+                    </a>
+                  </div>
                 </div>
-
-                <a href={p.live} target="_blank" rel="noreferrer">
-                  <img src={p.image} alt={`${p.name} dashboard`} className="shot mt-5" />
-                </a>
-                {p.caption && <p className="small muted mt-2">{p.caption}</p>}
-
-                <ul className="bullets mt-3">
-                  {p.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
-
-                <div className="flex gap-4 mt-4 small">
-                  <a href={p.live} target="_blank" rel="noreferrer" className="link">
-                    Live
-                  </a>
-                  <a href={p.code} target="_blank" rel="noreferrer" className="link">
-                    Code
-                  </a>
-                </div>
-              </article>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12">
