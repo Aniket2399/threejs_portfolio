@@ -19,10 +19,10 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <img
-              src="/images/mine.jpg"
+              src="/images/headshot.jpg"
               alt={profile.name}
               className="shot mb-3"
-              style={{ maxWidth: 200 }}
+              style={{ width: "100%", maxWidth: 280, aspectRatio: "1 / 1", objectFit: "cover" }}
             />
             <p className="font-bold text-[15px]">{profile.name}</p>
             <p className="small muted">{profile.role}</p>
