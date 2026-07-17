@@ -13,9 +13,7 @@ const NavBar = () => {
               {name}
             </a>
           ))}
-          <a href={profile.cv} target="_blank" rel="noreferrer">
-            CV
-          </a>
+          <a href="#cv">CV</a>
           <a href="#contact" className="btn btn-primary">
             Contact
           </a>

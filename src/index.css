@@ -308,6 +308,18 @@ body {
   font-size: 12px;
 }
 
+/* ---------- CV page ---------- */
+
+.cv-h2 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+  margin: 26px 0 10px;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {

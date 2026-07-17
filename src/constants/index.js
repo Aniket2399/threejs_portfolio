@@ -13,6 +13,8 @@ const profile = {
     "Data Analyst with 5+ years turning messy financial, healthcare, and retail data into decisions. I work in SQL, Python, Tableau, and Power BI, with depth in fraud and anomaly analysis, ETL, and forecasting.",
   blurb2:
     "Currently at JP Morgan Chase on transaction fraud analytics. I also build and ship end-to-end analytics platforms of my own, and recently started building LLM-based AI agents.",
+  summary:
+    "Data Analyst with 5+ years delivering data-driven insights across banking, healthcare, and retail. Skilled in SQL, Python, Tableau, Power BI, and cloud platforms (AWS, Azure), with depth in fraud and anomaly analysis, ETL development, and predictive modeling. Proven record of improving detection accuracy, cutting manual effort, and enabling real-time decisions through scalable analytics. Recently extended into building and deploying LLM-based AI agents. Strong focus on data quality, governance, and automation.",
 };
 
 const navLinks = [
@@ -163,6 +165,16 @@ const education = [
   },
 ];
 
+const certifications = [
+  "INSPIRE (International Student Professional Readiness Education) Program Certification, Pace University, Nov 2024",
+];
+
+const achievements = [
+  "Held robotics leadership roles across all three years of the Bachelor's program: Technical Coordinator of the robotics team, then Technical Head of robotics events, then Head of the robotics event.",
+  "State-level under-18 soccer player.",
+  "Represented the college soccer team in inter-college tournaments, and played for the Computer department in the inter-department tournament, reaching the final.",
+];
+
 const socials = [
   { name: "GitHub", url: "https://github.com/Aniket2399" },
   { name: "LinkedIn", url: "https://linkedin.com/in/aniketk99" },
@@ -178,5 +190,7 @@ export {
   experience,
   skills,
   education,
+  certifications,
+  achievements,
   socials,
 };
