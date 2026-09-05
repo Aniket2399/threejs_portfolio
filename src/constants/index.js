@@ -25,10 +25,10 @@ const navLinks = [
 ];
 
 const metrics = [
-  { value: "5+", label: "years in data and dev" },
+  { value: "5+", label: "years across data and dev" },
   { value: "28%", label: "fraud detection accuracy gain" },
-  { value: "22%", label: "less manual investigation effort" },
-  { value: "3", label: "industries: banking, health, retail" },
+  { value: "3", label: "full-stack apps shipped to production" },
+  { value: "15M+", label: "data events modeled across platforms" },
 ];
 
 const heroTools = [
