@@ -33,8 +33,8 @@ const Projects = () => {
           })}
         </div>
 
-        <a href="#projects" className="btn btn-primary mt-8">
-          View all projects
+        <a href="#experience" className="btn btn-primary mt-8">
+          View Experience
         </a>
       </div>
     </section>
