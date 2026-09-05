@@ -396,6 +396,15 @@ body {
   height: auto;
   object-fit: cover;
   filter: grayscale(1) contrast(1.03);
+  transition: filter 0.4s ease;
+  /* keep the image on a stable composited layer so the filter transition
+     never re-rasterizes / snaps by a subpixel (no perceived movement) */
+  will-change: filter;
+  backface-visibility: hidden;
+}
+
+.photo-frame:hover img {
+  filter: none;
 }
 
 /* ---------- file-tree projects view ---------- */
