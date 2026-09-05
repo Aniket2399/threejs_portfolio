@@ -396,11 +396,6 @@ body {
   height: auto;
   object-fit: cover;
   filter: grayscale(1) contrast(1.03);
-  transition: filter 0.35s ease;
-}
-
-.photo-frame:hover img {
-  filter: none;
 }
 
 /* ---------- file-tree projects view ---------- */
