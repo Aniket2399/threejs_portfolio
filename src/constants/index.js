@@ -144,7 +144,7 @@ const experience = [
   },
   {
     company: "Astoria AI",
-    role: "Full Stack Developer (Part-Time)",
+    role: "Full Stack Developer",
     place: "New York, USA (Remote)",
     date: "Sep 2025 to Feb 2026",
     bullets: [
