@@ -11,7 +11,7 @@ const ProjectsPage = () => {
           </a>
           <nav className="nav-links">
             <a href="#top">Back to portfolio</a>
-            <a href="#cv">CV</a>
+            <a href="#resume">CV</a>
             <ThemeToggle />
           </nav>
         </div>

@@ -8,13 +8,13 @@ const profile = {
   email: "aniket.kshirsagar.work08@gmail.com",
   linkedin: "https://linkedin.com/in/aniketk99",
   github: "https://github.com/Aniket2399",
-  cv: "/Aniket-Kshirsagar-CV.pdf",
+  cv: "/Aniket-Kshirsagar-Resume.pdf",
   blurb:
     "Data Analyst with 5+ years turning messy financial, healthcare, and retail data into decisions. I work in SQL, Python, Tableau, and Power BI, with depth in fraud and anomaly analysis, ETL, and forecasting.",
   blurb2:
-    "Currently at JP Morgan Chase on transaction fraud analytics. I also build and ship end-to-end analytics platforms of my own, and recently started building LLM-based AI agents.",
+    "Currently a Senior Data Analyst at JP Morgan Chase on transaction fraud analytics. I also build and ship end-to-end analytics platforms of my own, and recently started building LLM-based AI agents.",
   summary:
-    "Data Analyst with 5+ years delivering data-driven insights across banking, healthcare, and retail. Skilled in SQL, Python, Tableau, Power BI, and cloud platforms (AWS, Azure), with depth in fraud and anomaly analysis, ETL development, and predictive modeling. Proven record of improving detection accuracy, cutting manual effort, and enabling real-time decisions through scalable analytics. Recently extended into building and deploying LLM-based AI agents. Strong focus on data quality, governance, and automation.",
+    "Data Analyst with 5+ years helping teams in banking, healthcare, and retail make better decisions from messy data. I start with the real business problem, choose the analysis that fits, and judge my work by whether it changed what someone did, with measurable outcomes: sharper fraud detection, faster reporting, and forecasts accurate enough to reshape planning.",
 };
 
 const navLinks = [
@@ -27,7 +27,7 @@ const navLinks = [
 const metrics = [
   { value: "5+", label: "years in analytics" },
   { value: "28%", label: "fraud detection accuracy gain" },
-  { value: "18%", label: "demand forecast precision gain" },
+  { value: "22%", label: "less manual investigation effort" },
   { value: "3", label: "industries: banking, health, retail" },
 ];
 
@@ -44,6 +44,31 @@ const heroTools = [
 ];
 
 const featuredProjects = [
+  {
+    name: "SelfPrep",
+    slug: "selfprep",
+    tagline: "AI voice-agent interview practice platform",
+    insight: "Voice-driven mock interviews with real-time, personalized AI feedback.",
+    stack: "Next.js, TypeScript, Firebase, Vapi AI, Google Gemini, Tailwind",
+    live: "https://selfprep-ai.vercel.app",
+    code: "https://github.com/Aniket2399/selfprep_ai",
+    description: [
+      "SelfPrep is a job-interview practice platform powered by Vapi AI voice agents. A candidate picks a role, interview type, level, and question count, and the app generates a custom interview and runs it as a natural spoken conversation, no typing required.",
+      "During the session the agent asks questions, transcribes each answer in real time, and adapts its follow-ups based on what the candidate says. Google Gemini drives both the question generation and the post-interview evaluation, while Firebase handles authentication and stores every session.",
+      "When the interview ends, SelfPrep scores the candidate across technical knowledge, communication, confidence, and problem-solving, and returns a structured feedback report. Built with Next.js, TypeScript, Tailwind, and shadcn/ui, and deployed on Vercel.",
+    ],
+    bullets: [
+      "End-to-end voice interview flow: preference collection, custom question generation, and a spoken Q&A loop with real-time transcription and adaptive follow-ups.",
+      "Google Gemini generates role-specific questions and a structured post-interview evaluation across technical, communication, confidence, and problem-solving.",
+      "Next.js and Firebase (auth and storage), Vapi AI voice agents, Tailwind and shadcn/ui, deployed on Vercel.",
+    ],
+    shots: [
+      { src: "/images/selfprep-dashboard.jpg", cap: "Dashboard: your interview library, with role-specific interviews to take and past results." },
+      { src: "/images/selfprep-interview.jpg", cap: "Live voice interview: the AI interviewer and candidate, with the response transcribed in real time." },
+      { src: "/images/selfprep-feedback.jpg", cap: "AI feedback: scored across communication, technical knowledge, problem-solving, and confidence, with strengths and areas to improve." },
+      { src: "/images/selfprep-flow.jpg", cap: "System design: data collection and preparation, the interview process, and evaluation and reporting." },
+    ],
+  },
   {
     name: "Soccer PepStats",
     slug: "soccer-pepstats",
@@ -107,25 +132,35 @@ const otherProjects = [
 const experience = [
   {
     company: "JP Morgan Chase",
-    role: "Data Analyst",
+    role: "Senior Data Analyst",
     place: "New Jersey, USA",
-    date: "Sep 2024 to Present",
+    date: "Mar 2026 to Present",
     bullets: [
-      "Analyzed large-scale transaction datasets in SQL to surface suspicious activity across multiple banking channels.",
-      "Built anomaly detection logic in Python and tuned rule-based models, improving fraud detection accuracy by 28% and cutting false positives.",
-      "Shipped Tableau dashboards for fraud trends and alert volumes, reducing manual investigation effort by 22%.",
-      "Used AWS (S3, Redshift, Athena, Glue) for scalable processing, contributing to a 15% cut in fraud-related exposure.",
+      "Traced where fraud detection rules misfired and rebuilt them, lifting accuracy 28% so investigators could focus on the cases that mattered.",
+      "Replaced slow manual checks with automated, standardized monitoring across every banking channel, cutting investigation effort 22%.",
+      "Surfaced fraud anomalies early through shared dashboards, helping the business cut fraud-related exposure roughly 15% over the year.",
     ],
   },
   {
     company: "Astoria AI",
-    role: "AI Engineer (Part-Time)",
+    role: "Full Stack Developer (Part-Time)",
     place: "New York, USA (Remote)",
     date: "Sep 2025 to Feb 2026",
     bullets: [
-      "Built and deployed LLM-based AI agents, taking them from prototypes to running services.",
-      "Designed a unified dashboard with drag-and-drop agent cards to monitor and operate every agent in one view.",
-      "Developed a scheduler-driven recruiting pipeline with OAuth 2.0 secured APIs.",
+      "Took promising AI-agent prototypes to production as reliable services that automate real recruiting workflows end to end.",
+      "Built a pipeline that advances candidates automatically with scheduled reminders, removing most manual coordination.",
+      "Shipped a single dashboard to monitor and operate every agent, secured behind OAuth-protected APIs.",
+    ],
+  },
+  {
+    company: "JPMorgan Chase",
+    role: "Data Analyst Intern (Part-Time)",
+    place: "New York, USA (Remote)",
+    date: "May 2024 to Aug 2024",
+    bullets: [
+      "Diagnosed slow production reporting queries with execution plans, pinpointing full table scans, inefficient joins, and missing predicates.",
+      "Rewrote query logic (subqueries to joins, earlier filters) and added composite and covering indexes, materially cutting runtime and dashboard load times.",
+      "Built Tableau dashboards to stakeholder requirements, enabling self-service access that previously required manual SQL pulls.",
     ],
   },
   {
@@ -134,21 +169,20 @@ const experience = [
     place: "India",
     date: "Jan 2022 to Jul 2023",
     bullets: [
-      "Automated recurring healthcare reporting in Power BI, cutting manual effort by roughly 28%.",
-      "Engineered Azure Data Factory ETL pipelines consolidating disparate healthcare sources into analytics-ready datasets.",
-      "Ran patient segmentation and cohort modeling in Python to target higher-risk populations, under PHI governance.",
+      "Automated healthcare reporting end to end, cutting effort nearly 28% and giving stakeholders numbers they could trust.",
+      "Consolidated fragmented source systems with Azure Data Factory into clean, analytics-ready data the enterprise could depend on.",
+      "Segmented patients and modeled cohorts in Python to point interventions toward the highest-risk groups first.",
     ],
   },
   {
     company: "Accenture",
-    role: "Data Analyst",
+    role: "Junior Data Analyst",
     place: "India",
     date: "Aug 2019 to Dec 2021",
     bullets: [
-      "Built time-series demand forecasting models in Python, increasing prediction precision by 18%.",
-      "Mined historical sales with SQL to surface seasonal demand, reducing stockouts by 15%.",
-      "Delivered Power BI KPI dashboards for inventory turnover, speeding stakeholder decisions by 25%.",
-      "Ran A/B tests on replenishment strategies, cutting excess inventory by 12%.",
+      "Built Tableau charts and dashboards to each requirement, turning raw datasets into clear visuals the team could act on.",
+      "Ran careful data validation (nulls, duplicates, stray whitespace) so the data feeding the models started clean and consistent.",
+      "Fed that validated data to the Python models the data engineers built, improving how efficiently and accurately they ran.",
     ],
   },
 ];

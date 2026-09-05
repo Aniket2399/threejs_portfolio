@@ -10,8 +10,27 @@ import CV from "./sections/CV";
 import ProjectsPage from "./sections/ProjectsPage";
 import ProjectDetail from "./sections/ProjectDetail";
 import ExperiencePage from "./sections/ExperiencePage";
+import { featuredProjects } from "./constants";
 
-const PAGES = { "#cv": CV, "#projects": ProjectsPage, "#experience": ExperiencePage };
+const PAGES = {
+  "#cv": CV,
+  "#resume": CV,
+  "#projects": ProjectsPage,
+  "#experience": ExperiencePage,
+};
+
+const BASE = "Aniket Kshirsagar";
+
+const titleFor = (hash) => {
+  if (hash === "#resume" || hash === "#cv") return `${BASE} - Resume`;
+  if (hash === "#projects") return `Projects - ${BASE}`;
+  if (hash === "#experience") return `Experience - ${BASE}`;
+  if (hash.startsWith("#project-")) {
+    const p = featuredProjects.find((x) => x.slug === hash.replace("#project-", ""));
+    return p ? `${p.name} - ${BASE}` : `${BASE} - Data Analyst`;
+  }
+  return `${BASE} - Data Analyst`;
+};
 
 const App = () => {
   const [route, setRoute] = useState(window.location.hash);
@@ -20,8 +39,10 @@ const App = () => {
     const onHash = () => {
       const hash = window.location.hash;
       setRoute(hash);
+      document.title = titleFor(hash);
       if (PAGES[hash] || hash.startsWith("#project-")) window.scrollTo(0, 0);
     };
+    onHash();
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);

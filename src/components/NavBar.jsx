@@ -14,7 +14,7 @@ const NavBar = () => {
               {name}
             </a>
           ))}
-          <a href="#cv">CV</a>
+          <a href="#resume">CV</a>
           <a href="#contact" className="btn btn-primary">
             Contact
           </a>
