@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -40,12 +40,23 @@ const App = () => {
       const hash = window.location.hash;
       setRoute(hash);
       document.title = titleFor(hash);
-      if (PAGES[hash] || hash.startsWith("#project-")) window.scrollTo(0, 0);
     };
     onHash();
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
+
+  // After a page route mounts, jump to the top instantly (bypassing the
+  // smooth-scroll CSS) so the new page always opens at its top.
+  useLayoutEffect(() => {
+    if (PAGES[route] || route.startsWith("#project-")) {
+      const html = document.documentElement;
+      const prev = html.style.scrollBehavior;
+      html.style.scrollBehavior = "auto";
+      window.scrollTo(0, 0);
+      html.style.scrollBehavior = prev;
+    }
+  }, [route]);
 
   if (route.startsWith("#project-")) {
     return <ProjectDetail slug={route.replace("#project-", "")} />;
