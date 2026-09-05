@@ -27,9 +27,9 @@ const titleFor = (hash) => {
   if (hash === "#experience") return `Experience - ${BASE}`;
   if (hash.startsWith("#project-")) {
     const p = featuredProjects.find((x) => x.slug === hash.replace("#project-", ""));
-    return p ? `${p.name} - ${BASE}` : `${BASE} - Data Analyst`;
+    return p ? `${p.name} - ${BASE}` : `${BASE} - Data Analyst with Full Stack Developer`;
   }
-  return `${BASE} - Data Analyst`;
+  return `${BASE} - Data Analyst with Full Stack Developer`;
 };
 
 const App = () => {

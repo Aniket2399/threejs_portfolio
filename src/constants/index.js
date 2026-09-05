@@ -3,18 +3,18 @@
 
 const profile = {
   name: "Aniket Kshirsagar",
-  role: "Data Analyst",
+  role: "Data Analyst with Full Stack Developer",
   location: "New Jersey, USA",
   email: "aniket.kshirsagar.work08@gmail.com",
   linkedin: "https://linkedin.com/in/aniketk99",
   github: "https://github.com/Aniket2399",
   cv: "/Aniket-Kshirsagar-Resume.pdf",
   blurb:
-    "Data Analyst with 5+ years turning messy financial, healthcare, and retail data into decisions. I work in SQL, Python, Tableau, and Power BI, with depth in fraud and anomaly analysis, ETL, and forecasting.",
+    "5+ years turning messy financial, healthcare, and retail data into decisions, and shipping the web apps and AI-agent systems that put those decisions in front of people.",
   blurb2:
-    "Currently a Senior Data Analyst at JP Morgan Chase on transaction fraud analytics. I also build and ship end-to-end analytics platforms of my own, and recently started building LLM-based AI agents.",
+    "On the data side: SQL, Python, Tableau, and Power BI, with depth in fraud analysis, ETL, and forecasting. On the build side: React, TypeScript, Next.js, and FastAPI, plus LLM and agentic-AI systems. Currently a Senior Data Analyst at JP Morgan Chase.",
   summary:
-    "Data Analyst with 5+ years helping teams in banking, healthcare, and retail make better decisions from messy data. I start with the real business problem, choose the analysis that fits, and judge my work by whether it changed what someone did, with measurable outcomes: sharper fraud detection, faster reporting, and forecasts accurate enough to reshape planning.",
+    "Data Analyst and analytics engineer with 5+ years turning complex data into decisions across banking, healthcare, and retail, paired with hands-on full-stack and applied-AI development. I work in SQL and Python with ETL pipelines, data modeling, and BI dashboards, and I also ship production web apps in React, TypeScript, and FastAPI with LLM and agentic-AI systems. I judge every project by whether it changed what someone did: sharper fraud detection, faster reporting, and forecasts accurate enough to reshape planning.",
 };
 
 const navLinks = [
@@ -25,7 +25,7 @@ const navLinks = [
 ];
 
 const metrics = [
-  { value: "5+", label: "years in analytics" },
+  { value: "5+", label: "years in data and dev" },
   { value: "28%", label: "fraud detection accuracy gain" },
   { value: "22%", label: "less manual investigation effort" },
   { value: "3", label: "industries: banking, health, retail" },
@@ -34,13 +34,14 @@ const metrics = [
 const heroTools = [
   "SQL",
   "Python",
-  "pandas",
   "Tableau",
   "Power BI",
   "AWS",
-  "Azure",
-  "dbt",
-  "Spark",
+  "React",
+  "TypeScript",
+  "Next.js",
+  "FastAPI",
+  "LLM Agents",
 ];
 
 const featuredProjects = [
@@ -188,20 +189,28 @@ const experience = [
 ];
 
 const skills = [
-  { group: "Languages", items: ["Python", "SQL", "R"] },
+  { group: "Languages", items: ["Python", "SQL", "JavaScript", "TypeScript", "R"] },
   { group: "BI and Viz", items: ["Tableau", "Power BI", "Looker", "Matplotlib", "Seaborn"] },
   { group: "Data", items: ["pandas", "NumPy", "Excel (Advanced)", "Power Query"] },
-  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQL Server", "Oracle"] },
+  {
+    group: "Web and App Dev",
+    items: ["React", "Next.js", "Node.js", "FastAPI", "Tailwind", "REST APIs", "OAuth 2.0"],
+  },
+  {
+    group: "AI",
+    items: ["LLM and agentic AI", "RAG", "Vapi AI", "Google Gemini", "NLP"],
+  },
+  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQL Server", "Oracle", "DuckDB"] },
   {
     group: "Cloud and Big Data",
     items: ["AWS (S3, Redshift, Athena, Glue)", "Azure", "BigQuery", "PySpark", "Hive"],
   },
-  { group: "ETL and Modeling", items: ["Azure Data Factory", "dbt", "DuckDB", "ETL pipelines"] },
+  { group: "ETL and Modeling", items: ["Azure Data Factory", "dbt", "ETL pipelines"] },
   {
     group: "Statistics",
     items: ["Hypothesis testing", "Regression", "A/B testing", "Forecasting"],
   },
-  { group: "Other", items: ["Ravelin", "LLM AI agents", "Git", "Jira", "Agile"] },
+  { group: "Other", items: ["Ravelin", "Git", "CI/CD", "Jira", "Agile"] },
 ];
 
 const education = [

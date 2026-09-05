@@ -47,9 +47,9 @@ const About = () => {
               </p>
               <p className="lead muted mt-3">
                 I have worked across banking fraud analytics at JP Morgan Chase, healthcare reporting
-                at Capgemini, and retail forecasting at Accenture. On the side I build analytics
-                platforms end to end, which is where the SQL, dbt, DuckDB, and dashboard work in my
-                projects comes from.
+                at Capgemini, and retail forecasting at Accenture. I also build the other half end to
+                end: production web apps in React, TypeScript, Next.js, and FastAPI, and LLM and
+                agentic-AI systems, which is where the full-stack work in my projects comes from.
               </p>
 
               <h3 className="text-[13px] font-bold mt-7 mb-2">Education</h3>
