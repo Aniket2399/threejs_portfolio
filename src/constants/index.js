@@ -10,11 +10,11 @@ const profile = {
   github: "https://github.com/Aniket2399",
   cv: "/Aniket-Kshirsagar-Resume.pdf",
   blurb:
-    "5+ years turning messy financial, healthcare, and retail data into decisions, and shipping the web apps and AI-agent systems that put those decisions in front of people.",
+    "5+ years turning messy financial, healthcare, and retail data into decisions, and building the front end that presents it: custom, interactive dashboards in React, Next.js, and TypeScript that turn analysis into products people actually use.",
   blurb2:
-    "On the data side: SQL, Python, Tableau, and Power BI, with depth in fraud analysis, ETL, and forecasting. On the build side: React, TypeScript, Next.js, and FastAPI, plus LLM and agentic-AI systems. Currently a Senior Data Analyst at JP Morgan Chase.",
+    "The analysis runs on SQL, Python, Tableau, and Power BI. The front end is React, Next.js, TypeScript, and Tailwind, with FastAPI and AI-agent systems behind it, the same full stack powering the platforms I ship (PepStats, COURTSIDE, SelfPrep). I care as much about how an insight looks and feels to use as about the number behind it. Currently a Senior Data Analyst at JP Morgan Chase.",
   summary:
-    "Data Analyst and analytics engineer with 5+ years turning complex data into decisions across banking, healthcare, and retail, paired with hands-on full-stack and applied-AI development. I work in SQL and Python with ETL pipelines, data modeling, and BI dashboards, and I also ship production web apps in React, TypeScript, and FastAPI with LLM and agentic-AI systems. I judge every project by whether it changed what someone did: sharper fraud detection, faster reporting, and forecasts accurate enough to reshape planning.",
+    "Data analyst and full-stack developer with 5+ years turning complex data into decisions across banking, healthcare, and retail, and building the front end that delivers them. SQL and Python drive the analysis; React, Next.js, TypeScript, and Tailwind build the custom, interactive dashboards that present it, with FastAPI and AI-agent systems on the backend, the same stack behind my analytics platforms (PepStats, COURTSIDE, SelfPrep). I judge every project by whether it changed what someone did, and by whether the interface made that effortless.",
 };
 
 const navLinks = [

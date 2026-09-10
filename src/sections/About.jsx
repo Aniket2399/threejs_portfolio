@@ -41,15 +41,17 @@ const About = () => {
             <div className="card-head">Background</div>
             <div className="card-body">
               <p className="lead">
-                I like finding the story hidden in data: catching fraud patterns, forecasting
-                demand, and building dashboards people actually use to decide. Clean data and a clear
-                answer beat a fancy chart every time.
+                I like finding the story hidden in data, and then building the interface that tells
+                it. Most analysts hand off a spreadsheet; I ship the custom, interactive dashboard in
+                React and Next.js so people can explore the answer themselves. Clean data and a clear
+                interface beat a fancy chart every time.
               </p>
               <p className="lead muted mt-3">
-                I have worked across banking fraud analytics at JP Morgan Chase, healthcare reporting
-                at Capgemini, and retail forecasting at Accenture. I also build the other half end to
-                end: production web apps in React, TypeScript, Next.js, and FastAPI, and LLM and
-                agentic-AI systems, which is where the full-stack work in my projects comes from.
+                On the analysis side I have worked across banking fraud at JP Morgan Chase, healthcare
+                reporting at Capgemini, and retail forecasting at Accenture. On the front end I build
+                the whole experience: React, Next.js, TypeScript, and Tailwind, with hand-rolled SVG
+                charts, FastAPI services, and AI-agent systems behind them, which is where the
+                full-stack work in my projects (PepStats, COURTSIDE, SelfPrep) comes from.
               </p>
 
               <h3 className="text-[13px] font-bold mt-7 mb-2">Education</h3>
