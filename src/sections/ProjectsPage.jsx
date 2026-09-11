@@ -1,23 +1,8 @@
-import { profile, featuredProjects } from "../constants";
-import ThemeToggle from "../components/ThemeToggle";
+import { featuredProjects } from "../constants";
 
 const ProjectsPage = () => {
   return (
-    <div>
-      <header className="nav">
-        <div className="wrap nav-inner">
-          <a href="#top" className="font-bold text-[15px]">
-            {profile.name}
-          </a>
-          <nav className="nav-links">
-            <a href="#top">Back to portfolio</a>
-            <a href="#resume">CV</a>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </header>
-
-      <section className="section" style={{ borderBottom: "none" }}>
+    <section className="section" style={{ borderBottom: "none" }}>
         <div className="wrap">
           <h1 className="section-title">Projects</h1>
           <p className="section-note">
@@ -57,7 +42,6 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
-    </div>
   );
 };
 

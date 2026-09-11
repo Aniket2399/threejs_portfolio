@@ -1,44 +1,23 @@
-import { profile, featuredProjects } from "../constants";
-import ThemeToggle from "../components/ThemeToggle";
+import { featuredProjects } from "../constants";
 
 const ProjectDetail = ({ slug }) => {
   const p = featuredProjects.find((x) => x.slug === slug);
 
-  const Header = () => (
-    <header className="nav">
-      <div className="wrap nav-inner">
-        <a href="#top" className="font-bold text-[15px]">
-          {profile.name}
-        </a>
-        <nav className="nav-links">
-          <a href="#projects">All projects</a>
-          <a href="#top">Home</a>
-          <ThemeToggle />
-        </nav>
-      </div>
-    </header>
-  );
-
   if (!p) {
     return (
-      <div>
-        <Header />
-        <section className="section" style={{ borderBottom: "none" }}>
-          <div className="wrap">
-            <h1 className="section-title">Project not found</h1>
-            <a href="#projects" className="btn btn-primary mt-6">
-              Back to projects
-            </a>
-          </div>
-        </section>
-      </div>
+      <section className="section" style={{ borderBottom: "none" }}>
+        <div className="wrap">
+          <h1 className="section-title">Project not found</h1>
+          <a href="#projects" className="btn btn-primary mt-6">
+            Back to projects
+          </a>
+        </div>
+      </section>
     );
   }
 
   return (
-    <div>
-      <Header />
-      <section className="section" style={{ borderBottom: "none" }}>
+    <section className="section" style={{ borderBottom: "none" }}>
         <div className="wrap" style={{ maxWidth: 860 }}>
           <p className="tree-root small">
             <a href="#projects" className="link">
@@ -119,7 +98,6 @@ const ProjectDetail = ({ slug }) => {
           </div>
         </div>
       </section>
-    </div>
   );
 };
 

@@ -22,6 +22,7 @@ const navLinks = [
   { name: "Experience", link: "#experience" },
   { name: "Skills", link: "#skills" },
   { name: "About", link: "#about" },
+  { name: "Blog", link: "#blog" },
 ];
 
 const metrics = [

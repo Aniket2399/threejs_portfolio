@@ -8,7 +8,6 @@ import {
   certifications,
   achievements,
 } from "../constants";
-import ThemeToggle from "../components/ThemeToggle";
 
 const CV = () => {
   const projects = [
@@ -29,24 +28,8 @@ const CV = () => {
   ];
 
   return (
-    <div>
-      <header className="nav">
-        <div className="wrap nav-inner">
-          <a href="#top" className="font-bold text-[14px]">
-            {profile.name}
-          </a>
-          <nav className="nav-links">
-            <a href="#top">Back to portfolio</a>
-            <a href={profile.cv} target="_blank" rel="noreferrer" className="btn btn-primary">
-              Download PDF
-            </a>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </header>
-
-      <div className="wrap" style={{ maxWidth: 820 }}>
-        <section className="section" style={{ borderBottom: "none" }}>
+    <div className="wrap" style={{ maxWidth: 820 }}>
+      <section className="section" style={{ borderBottom: "none" }}>
           {/* header */}
           <h1 className="h1" style={{ fontSize: "clamp(28px, 5vw, 40px)" }}>
             {profile.name}
@@ -168,7 +151,6 @@ const CV = () => {
             </a>
           </div>
         </section>
-      </div>
     </div>
   );
 };

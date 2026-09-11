@@ -1,9 +1,10 @@
 import { useEffect, useLayoutEffect, useState } from "react";
-import NavBar from "./components/NavBar";
+import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import About from "./sections/About";
+import Blog from "./sections/Blog";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import CV from "./sections/CV";
@@ -32,6 +33,8 @@ const titleFor = (hash) => {
   return `${BASE} - Data Analyst with Full Stack Developer`;
 };
 
+const isPage = (hash) => Boolean(PAGES[hash]) || hash.startsWith("#project-");
+
 const App = () => {
   const [route, setRoute] = useState(window.location.hash);
 
@@ -46,10 +49,10 @@ const App = () => {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  // After a page route mounts, jump to the top instantly (bypassing the
-  // smooth-scroll CSS) so the new page always opens at its top.
+  // When a full page route mounts, jump to the top instantly (bypassing
+  // smooth-scroll) so the new page always opens at its top.
   useLayoutEffect(() => {
-    if (PAGES[route] || route.startsWith("#project-")) {
+    if (isPage(route)) {
       const html = document.documentElement;
       const prev = html.style.scrollBehavior;
       html.style.scrollBehavior = "auto";
@@ -58,25 +61,33 @@ const App = () => {
     }
   }, [route]);
 
+  let content;
   if (route.startsWith("#project-")) {
-    return <ProjectDetail slug={route.replace("#project-", "")} />;
-  }
-
-  const Page = PAGES[route];
-  if (Page) return <Page />;
-
-  return (
-    <>
-      <NavBar />
+    content = <ProjectDetail slug={route.replace("#project-", "")} />;
+  } else if (PAGES[route]) {
+    const Page = PAGES[route];
+    content = <Page />;
+  } else {
+    content = (
       <main>
         <Hero />
         <Projects />
         <Skills />
         <About />
+        <Blog />
         <Contact />
       </main>
-      <Footer />
-    </>
+    );
+  }
+
+  return (
+    <div className="layout">
+      <Sidebar />
+      <div className="content">
+        {content}
+        <Footer />
+      </div>
+    </div>
   );
 };
 
