@@ -1,7 +1,6 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import About from "./sections/About";
 import Blog from "./sections/Blog";
@@ -18,34 +17,32 @@ const PAGES = {
   "#resume": CV,
   "#projects": ProjectsPage,
   "#experience": ExperiencePage,
+  "#skills": Skills,
+  "#about": About,
+  "#blog": Blog,
+  "#contact": Contact,
 };
 
 const BASE = "Aniket Kshirsagar";
+const TAGLINE = `${BASE} - Data Analyst with Full Stack Developer`;
 
 const titleFor = (hash) => {
   if (hash === "#resume" || hash === "#cv") return `${BASE} - Resume`;
   if (hash === "#projects") return `Projects - ${BASE}`;
   if (hash === "#experience") return `Experience - ${BASE}`;
+  if (hash === "#skills") return `Skills - ${BASE}`;
+  if (hash === "#about") return `About - ${BASE}`;
+  if (hash === "#blog") return `Blog - ${BASE}`;
+  if (hash === "#contact") return `Contact - ${BASE}`;
   if (hash.startsWith("#project-")) {
     const p = featuredProjects.find((x) => x.slug === hash.replace("#project-", ""));
-    return p ? `${p.name} - ${BASE}` : `${BASE} - Data Analyst with Full Stack Developer`;
+    return p ? `${p.name} - ${BASE}` : TAGLINE;
   }
-  return `${BASE} - Data Analyst with Full Stack Developer`;
-};
-
-const isPage = (hash) => Boolean(PAGES[hash]) || hash.startsWith("#project-");
-
-const scrollInstant = (fn) => {
-  const html = document.documentElement;
-  const prev = html.style.scrollBehavior;
-  html.style.scrollBehavior = "auto";
-  fn();
-  html.style.scrollBehavior = prev;
+  return TAGLINE;
 };
 
 const App = () => {
   const [route, setRoute] = useState(window.location.hash);
-  const prevRoute = useRef(window.location.hash);
 
   useEffect(() => {
     const onHash = () => {
@@ -58,29 +55,9 @@ const App = () => {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  // Handle scrolling after the new view has mounted.
+  // Every view is its own page now, so always open at the top.
   useLayoutEffect(() => {
-    const prev = prevRoute.current;
-    prevRoute.current = route;
-
-    // A full page route always opens at its top.
-    if (isPage(route)) {
-      scrollInstant(() => window.scrollTo(0, 0));
-      return;
-    }
-
-    // A home-section anchor reached FROM a page (home just mounted):
-    // the browser's native anchor scroll fired before the section existed,
-    // so scroll to it now, once it is in the DOM.
-    if (isPage(prev)) {
-      const id = route.replace("#", "");
-      scrollInstant(() => {
-        const el = id && id !== "top" ? document.getElementById(id) : null;
-        if (el) el.scrollIntoView();
-        else window.scrollTo(0, 0);
-      });
-    }
-    // Same-page anchor navigation is left to the native smooth scroll.
+    window.scrollTo(0, 0);
   }, [route]);
 
   let content;
@@ -90,16 +67,7 @@ const App = () => {
     const Page = PAGES[route];
     content = <Page />;
   } else {
-    content = (
-      <main>
-        <Hero />
-        <Projects />
-        <Skills />
-        <About />
-        <Blog />
-        <Contact />
-      </main>
-    );
+    content = <Hero />;
   }
 
   return (
