@@ -17,11 +17,11 @@ const profile = {
 };
 
 const navLinks = [
-  { name: "Projects", link: "#projects" },
-  { name: "Experience", link: "#experience" },
-  { name: "Skills", link: "#skills" },
-  { name: "About", link: "#about" },
-  { name: "Blog", link: "#blog" },
+  { name: "My Work", link: "#projects" },
+  { name: "My Path", link: "#experience" },
+  { name: "My Toolkit", link: "#skills" },
+  { name: "My Journey", link: "#about" },
+  { name: "My Writing", link: "#blog" },
 ];
 
 const metrics = [

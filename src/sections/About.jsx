@@ -76,7 +76,7 @@ const About = () => {
       <div className="wrap">
         <div className="about-layout">
           <div className="about-main">
-            <h2 className="section-title">About</h2>
+            <h2 className="section-title">My Journey</h2>
             <p className="section-note">
               Where I started, what I have built, and where I am headed.
             </p>

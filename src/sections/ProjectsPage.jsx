@@ -4,7 +4,7 @@ const ProjectsPage = () => {
   return (
     <section className="section" style={{ borderBottom: "none" }}>
         <div className="wrap">
-          <h1 className="section-title">Projects</h1>
+          <h1 className="section-title">My Work</h1>
           <p className="section-note">
             Open a folder to read the full case study, with screenshots and detail.
           </p>
