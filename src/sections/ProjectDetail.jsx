@@ -39,11 +39,11 @@ const ProjectDetail = ({ slug }) => {
             ))}
           </div>
 
-          <div className="flex gap-4 small mb-8">
-            <a href={p.live} target="_blank" rel="noreferrer" className="link">
+          <div className="flex flex-wrap gap-3 mb-8">
+            <a href={p.live} target="_blank" rel="noreferrer" className="btn">
               Live
             </a>
-            <a href={p.code} target="_blank" rel="noreferrer" className="link">
+            <a href={p.code} target="_blank" rel="noreferrer" className="btn">
               Code
             </a>
           </div>
