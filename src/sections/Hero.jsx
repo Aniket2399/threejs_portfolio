@@ -1,4 +1,4 @@
-import { heroTools, metrics, profile } from "../constants";
+import { profile } from "../constants";
 
 const Hero = () => {
   return (
@@ -12,34 +12,7 @@ const Hero = () => {
           <p className="lead muted">{profile.blurb2}</p>
         </div>
 
-        <div className="tools mt-7">
-          {heroTools.map((t) => (
-            <span key={t} className="tool">
-              {t}
-            </span>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-3 mt-8">
-          <a href="#projects" className="btn btn-primary">
-            View Projects
-          </a>
-          <a href={profile.cv} target="_blank" rel="noreferrer" className="btn">
-            Download CV
-          </a>
-          <a href="#contact" className="btn">
-            Get in Touch
-          </a>
-        </div>
-
-        <div className="metrics mt-10">
-          {metrics.map((m) => (
-            <div key={m.label} className="metric">
-              <div className="metric-value">{m.value}</div>
-              <div className="metric-label">{m.label}</div>
-            </div>
-          ))}
-        </div>
+        <p className="small muted mt-8">Use the navigation on the left to explore my work.</p>
       </div>
     </section>
   );
