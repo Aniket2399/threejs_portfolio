@@ -302,6 +302,14 @@ body {
   max-width: 66ch;
 }
 
+/* home intro: bold and larger, close to the heading weight */
+.hero-intro {
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 40ch;
+}
+
 .muted {
   color: var(--muted);
 }
