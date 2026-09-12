@@ -17,7 +17,7 @@ const profile = {
 };
 
 const navLinks = [
-  { name: "Projects", link: "#projects" },
+  { name: "Websites", link: "#projects" },
   { name: "Experience", link: "#experience" },
   { name: "Skills", link: "#skills" },
   { name: "My Journey", link: "#about" },

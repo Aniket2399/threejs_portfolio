@@ -28,7 +28,7 @@ const TAGLINE = `${BASE} - Data Analyst with Full Stack Developer`;
 
 const titleFor = (hash) => {
   if (hash === "#resume" || hash === "#cv") return `${BASE} - Resume`;
-  if (hash === "#projects") return `Projects - ${BASE}`;
+  if (hash === "#projects") return `Websites - ${BASE}`;
   if (hash === "#experience") return `Experience - ${BASE}`;
   if (hash === "#skills") return `Skills - ${BASE}`;
   if (hash === "#about") return `My Journey - ${BASE}`;
