@@ -91,12 +91,13 @@ body {
   /* center the nav vertically between the name (top) and toggle (bottom) */
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .sidebar-nav a {
   color: var(--muted);
   width: fit-content;
+  font-weight: 500;
 }
 
 /* reference-style hover: a subtle highlight sweeps in left to right
@@ -316,6 +317,7 @@ body {
 
 .small {
   font-size: 16px;
+  font-weight: 500;
 }
 
 /* ---------- surfaces ---------- */
