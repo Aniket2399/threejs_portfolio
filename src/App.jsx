@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -35,8 +35,17 @@ const titleFor = (hash) => {
 
 const isPage = (hash) => Boolean(PAGES[hash]) || hash.startsWith("#project-");
 
+const scrollInstant = (fn) => {
+  const html = document.documentElement;
+  const prev = html.style.scrollBehavior;
+  html.style.scrollBehavior = "auto";
+  fn();
+  html.style.scrollBehavior = prev;
+};
+
 const App = () => {
   const [route, setRoute] = useState(window.location.hash);
+  const prevRoute = useRef(window.location.hash);
 
   useEffect(() => {
     const onHash = () => {
@@ -49,16 +58,29 @@ const App = () => {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  // When a full page route mounts, jump to the top instantly (bypassing
-  // smooth-scroll) so the new page always opens at its top.
+  // Handle scrolling after the new view has mounted.
   useLayoutEffect(() => {
+    const prev = prevRoute.current;
+    prevRoute.current = route;
+
+    // A full page route always opens at its top.
     if (isPage(route)) {
-      const html = document.documentElement;
-      const prev = html.style.scrollBehavior;
-      html.style.scrollBehavior = "auto";
-      window.scrollTo(0, 0);
-      html.style.scrollBehavior = prev;
+      scrollInstant(() => window.scrollTo(0, 0));
+      return;
     }
+
+    // A home-section anchor reached FROM a page (home just mounted):
+    // the browser's native anchor scroll fired before the section existed,
+    // so scroll to it now, once it is in the DOM.
+    if (isPage(prev)) {
+      const id = route.replace("#", "");
+      scrollInstant(() => {
+        const el = id && id !== "top" ? document.getElementById(id) : null;
+        if (el) el.scrollIntoView();
+        else window.scrollTo(0, 0);
+      });
+    }
+    // Same-page anchor navigation is left to the native smooth scroll.
   }, [route]);
 
   let content;
