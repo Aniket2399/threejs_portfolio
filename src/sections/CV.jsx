@@ -16,8 +16,6 @@ const toc = [
   { id: "cv-experience", label: "Experience" },
   { id: "cv-projects", label: "Projects" },
   { id: "cv-education", label: "Education" },
-  { id: "cv-certifications", label: "Certifications" },
-  { id: "cv-achievements", label: "Achievements" },
 ];
 
 const CV = () => {
@@ -62,7 +60,7 @@ const CV = () => {
 
   return (
     <div className="wrap" style={{ maxWidth: 1040 }}>
-      <section className="section" style={{ borderBottom: "none" }}>
+      <section id="cv-page" className="section" style={{ borderBottom: "none" }}>
         <div className="about-layout">
           <div className="about-main">
             {/* header */}

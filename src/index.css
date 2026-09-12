@@ -182,6 +182,16 @@ body {
   padding-top: 0;
 }
 
+/* CV: same layout; drop the section top padding so the TOC sticks from
+   the very top (no initial drift), then restore breathing room in the main column */
+#cv-page {
+  padding-top: 0;
+}
+
+#cv-page .about-main {
+  padding-top: 48px;
+}
+
 #about .about-main {
   padding-top: 48px;
 }
@@ -218,7 +228,7 @@ body {
 }
 
 .toc-label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--muted);
@@ -229,7 +239,7 @@ body {
   display: block;
   text-align: left;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--muted);
   background: transparent;
   border: none;
