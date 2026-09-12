@@ -199,7 +199,7 @@ body {
 
 .about-toc {
   position: sticky;
-  top: 40px;
+  top: 72px;
   display: flex;
   flex-direction: column;
   gap: 2px;

@@ -59,11 +59,13 @@ const About = () => {
   return (
     <section id="about" className="section">
       <div className="wrap">
-        <h2 className="section-title">About</h2>
-        <p className="section-note">Where I started, what I have built, and where I am headed.</p>
-
         <div className="about-layout">
           <div className="about-main">
+            <h2 className="section-title">About</h2>
+            <p className="section-note">
+              Where I started, what I have built, and where I am headed.
+            </p>
+
             {sections.map((s) => (
               <div key={s.id}>
                 <h3 id={s.id} className="journey-h text-[22px] font-bold mt-8 mb-3">
