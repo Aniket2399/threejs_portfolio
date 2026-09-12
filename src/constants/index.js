@@ -10,9 +10,9 @@ const profile = {
   github: "https://github.com/Aniket2399",
   cv: "/Aniket-Kshirsagar-Resume.pdf",
   blurb:
-    "5+ years turning messy financial, healthcare, and retail data into decisions, and building the front end that presents it: custom, interactive dashboards in React, Next.js, and TypeScript that turn analysis into products people actually use.",
+    "Ever since I was a kid I have taken things apart just to see how they work: a cassette recorder, a TV remote, anything I could get a screwdriver into. The best part was always putting it back together, like Lego, until it clicked and worked again. I never really grew out of that.",
   blurb2:
-    "The analysis runs on SQL, Python, Tableau, and Power BI. The front end is React, Next.js, TypeScript, and Tailwind, with FastAPI and AI-agent systems behind it, the same full stack powering the platforms I ship (PepStats, COURTSIDE, SelfPrep). I care as much about how an insight looks and feels to use as about the number behind it. Currently a Senior Data Analyst at JP Morgan Chase.",
+    "These days the thing I take apart and rebuild is software and data. I pull a messy problem into pieces, figure out how they fit, and put it back together as something people can actually use. And when I am not doing that, I am probably watching or playing football, or arguing about it with anyone who will listen.",
   summary:
     "Data analyst and full-stack developer with 5+ years turning complex data into decisions across banking, healthcare, and retail, and building the front end that delivers them. SQL and Python drive the analysis; React, Next.js, TypeScript, and Tailwind build the custom, interactive dashboards that present it, with FastAPI and AI-agent systems on the backend, the same stack behind my analytics platforms (PepStats, COURTSIDE, SelfPrep). I judge every project by whether it changed what someone did, and by whether the interface made that effortless.",
 };
