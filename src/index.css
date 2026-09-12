@@ -38,7 +38,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* instant jumps, like the reference (no smooth-scroll animation) */
+  scroll-behavior: auto;
 }
 
 body {
@@ -265,10 +266,16 @@ body {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
+  background-image: linear-gradient(to right, var(--hl), var(--hl));
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease, color 0.2s ease;
 }
 
 .link:hover {
   color: var(--amber);
+  background-size: 100% 100%;
 }
 
 .btn {
@@ -568,12 +575,16 @@ body {
   font-weight: 700;
   color: var(--ink);
   text-decoration: none;
+  background-image: linear-gradient(to right, var(--hl), var(--hl));
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease, color 0.2s ease;
 }
 
 .tree-folder:hover {
   color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  background-size: 100% 100%;
 }
 
 .tree-sub {
@@ -595,10 +606,16 @@ body {
   margin-top: 10px;
   color: var(--accent);
   font-weight: 600;
+  background-image: linear-gradient(to right, var(--hl), var(--hl));
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease, color 0.2s ease;
 }
 
 .tree-readmore:hover {
   color: var(--amber);
+  background-size: 100% 100%;
 }
 
 /* ---------- CV page ---------- */
