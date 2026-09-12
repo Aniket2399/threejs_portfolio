@@ -72,7 +72,7 @@ const App = () => {
 
   return (
     <div className="layout">
-      <Sidebar />
+      <Sidebar route={route} />
       <div className="content">
         {content}
         <Footer />

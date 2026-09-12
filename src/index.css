@@ -114,6 +114,18 @@ body {
   background-size: 100% 100%;
 }
 
+/* the page you are currently on: underlined, full color */
+.sidebar-nav a.active {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.sidebar-nav .cta.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .sidebar-nav .cta {
   color: var(--ink);
   border: 1px solid var(--ink);
@@ -163,15 +175,66 @@ body {
   border-bottom: 1px dashed var(--rule);
 }
 
-/* About: centered reading column (like the reference about page) */
+/* About: story column + a sticky "on this page" TOC on the right */
 #about .wrap {
   margin-left: auto;
   margin-right: auto;
-  max-width: 820px;
+  max-width: 1000px;
 }
 
 #about .lead {
   max-width: none;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-main {
+  min-width: 0;
+}
+
+.about-toc {
+  position: sticky;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toc-label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.toc-link {
+  display: block;
+  text-align: left;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.toc-link:hover {
+  color: var(--ink);
+}
+
+.toc-link.active {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* underlined journey headers, like the reference about page (a 1px
@@ -678,6 +741,12 @@ body {
   }
   .content .wrap {
     padding: 0 20px;
+  }
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+  .about-toc {
+    display: none;
   }
 }
 
