@@ -88,7 +88,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 56px;
+  /* center the nav vertically between the name (top) and toggle (bottom) */
+  margin-top: auto;
+  margin-bottom: auto;
   font-size: 14px;
 }
 
@@ -141,7 +143,6 @@ body {
 }
 
 .sidebar-foot {
-  margin-top: auto;
   padding-top: 24px;
   display: flex;
   align-items: center;
@@ -175,7 +176,15 @@ body {
   border-bottom: 1px dashed var(--rule);
 }
 
-/* About: story column + a sticky "on this page" TOC on the right */
+/* About: story column + a vertically-centered "on this page" TOC */
+#about {
+  padding-top: 0;
+}
+
+#about .about-main {
+  padding-top: 48px;
+}
+
 #about .wrap {
   margin-left: auto;
   margin-right: auto;
@@ -199,9 +208,11 @@ body {
 
 .about-toc {
   position: sticky;
-  top: 72px;
+  top: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2px;
 }
 
