@@ -6,7 +6,7 @@ const About = () => {
         <p className="section-note">Where I started, what I have built, and where I am headed.</p>
 
         <div style={{ maxWidth: "68ch" }}>
-          <h3 className="text-[15px] font-bold mt-6 mb-2">Where I started</h3>
+          <h3 className="text-[22px] font-bold mt-6 mb-2">Where I started</h3>
           <p className="lead">
             I grew up in Pune and studied computer science, though I spent more time on the robotics
             team than in lectures. Over three years I went from technical coordinator to running our
@@ -14,7 +14,7 @@ const About = () => {
             taught me the same thing: I like building with a team, and I like winning on the details.
           </p>
 
-          <h3 className="text-[15px] font-bold mt-8 mb-2">Falling for data</h3>
+          <h3 className="text-[22px] font-bold mt-8 mb-2">Falling for data</h3>
           <p className="lead">
             My first real job was as a junior data analyst at Accenture, cleaning messy retail data
             and turning it into Tableau dashboards people could act on. At Capgemini I automated
@@ -22,7 +22,7 @@ const About = () => {
             never the chart, it is whether someone changed a decision because of it.
           </p>
 
-          <h3 className="text-[15px] font-bold mt-8 mb-2">Learning to build, not just analyze</h3>
+          <h3 className="text-[22px] font-bold mt-8 mb-2">Learning to build, not just analyze</h3>
           <p className="lead">
             I moved to New York for a master's in computer science at Pace, and the more I analyzed
             data, the more I wanted to own the whole thing, from the raw pipeline to the interface
@@ -33,7 +33,7 @@ const About = () => {
             the way to a live product.
           </p>
 
-          <h3 className="text-[15px] font-bold mt-8 mb-2">Where I am now</h3>
+          <h3 className="text-[22px] font-bold mt-8 mb-2">Where I am now</h3>
           <p className="lead">
             Today I am a senior data analyst at JPMorgan Chase working on fraud analytics, rebuilding
             detection rules and the dashboards that surface anomalies before they cost the business.
@@ -41,7 +41,7 @@ const About = () => {
             something you can actually explore.
           </p>
 
-          <h3 className="text-[15px] font-bold mt-8 mb-2">What I am pursuing</h3>
+          <h3 className="text-[22px] font-bold mt-8 mb-2">What I am pursuing</h3>
           <p className="lead">
             I want to keep living in both worlds, the analysis and the interface. My goal is to build
             data products end to end, where the insight and the experience of using it are designed
