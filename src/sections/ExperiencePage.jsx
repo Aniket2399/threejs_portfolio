@@ -4,7 +4,7 @@ const ExperiencePage = () => {
   return (
     <section className="section" style={{ borderBottom: "none" }}>
         <div className="wrap">
-          <h1 className="section-title">My Path</h1>
+          <h1 className="section-title">Experience</h1>
           <p className="section-note">
             5+ years across banking fraud, healthcare, and retail analytics.
           </p>

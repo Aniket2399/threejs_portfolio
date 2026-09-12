@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section">
       <div className="wrap">
-        <h2 className="section-title">My Toolkit</h2>
+        <h2 className="section-title">Skills</h2>
         <p className="section-note">Tools I use day to day, grouped by what they are for.</p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">

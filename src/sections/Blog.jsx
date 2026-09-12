@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <section id="blog" className="section">
       <div className="wrap">
-        <h2 className="section-title">My Writing</h2>
+        <h2 className="section-title">Blog</h2>
         <p className="section-note">
           Short weekly notes on data, frontend, and AI, cross-posted to LinkedIn.
         </p>
