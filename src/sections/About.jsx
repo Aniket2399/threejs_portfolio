@@ -5,7 +5,7 @@ const About = () => {
         <h2 className="section-title">About</h2>
         <p className="section-note">Where I started, what I have built, and where I am headed.</p>
 
-        <div style={{ maxWidth: "68ch" }}>
+        <div>
           <h3 className="text-[22px] font-bold mt-6 mb-2">Where I started</h3>
           <p className="lead">
             I grew up in Pune and studied computer science, though I spent more time on the robotics
