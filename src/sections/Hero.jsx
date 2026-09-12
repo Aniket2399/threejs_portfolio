@@ -4,8 +4,7 @@ const Hero = () => {
   return (
     <section id="top" className="section">
       <div className="wrap">
-        <p className="small muted mb-3">Hi, I'm Aniket. Based in {profile.location}.</p>
-        <h1 className="h1">{profile.role}</h1>
+        <h1 className="h1">Hi, my name is Aniket.</h1>
 
         <div className="mt-6 flex flex-col gap-4">
           <p className="lead">{profile.blurb}</p>
