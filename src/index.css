@@ -192,6 +192,18 @@ body {
   padding-top: 48px;
 }
 
+/* big screens (e.g. 27" monitors): let the CV use more width and push the
+   "On this page" TOC to the right edge, keeping the resume text readable */
+@media (min-width: 1400px) {
+  .content .wrap.cv-wrap {
+    max-width: 1500px;
+  }
+  #cv-page .about-layout {
+    grid-template-columns: minmax(0, 760px) 190px;
+    justify-content: space-between;
+  }
+}
+
 #about .about-main {
   padding-top: 48px;
 }

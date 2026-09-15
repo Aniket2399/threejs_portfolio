@@ -59,7 +59,7 @@ const CV = () => {
   ];
 
   return (
-    <div className="wrap" style={{ maxWidth: 1040 }}>
+    <div className="wrap cv-wrap">
       <section id="cv-page" className="section" style={{ borderBottom: "none" }}>
         <div className="about-layout">
           <div className="about-main">
