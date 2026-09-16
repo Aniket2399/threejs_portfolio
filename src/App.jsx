@@ -10,7 +10,9 @@ import CV from "./sections/CV";
 import ProjectsPage from "./sections/ProjectsPage";
 import ProjectDetail from "./sections/ProjectDetail";
 import ExperiencePage from "./sections/ExperiencePage";
+import BlogPost from "./sections/BlogPost";
 import { featuredProjects } from "./constants";
+import { posts } from "./constants/posts";
 
 const PAGES = {
   "#cv": CV,
@@ -38,6 +40,10 @@ const titleFor = (hash) => {
     const p = featuredProjects.find((x) => x.slug === hash.replace("#project-", ""));
     return p ? `${p.name} - ${BASE}` : TAGLINE;
   }
+  if (hash.startsWith("#post-")) {
+    const p = posts.find((x) => x.slug === hash.replace("#post-", ""));
+    return p ? `${p.title} - ${BASE}` : `Blog - ${BASE}`;
+  }
   return TAGLINE;
 };
 
@@ -63,6 +69,8 @@ const App = () => {
   let content;
   if (route.startsWith("#project-")) {
     content = <ProjectDetail slug={route.replace("#project-", "")} />;
+  } else if (route.startsWith("#post-")) {
+    content = <BlogPost slug={route.replace("#post-", "")} />;
   } else if (PAGES[route]) {
     const Page = PAGES[route];
     content = <Page />;

@@ -1,4 +1,5 @@
 import { profile } from "../constants";
+import { posts } from "../constants/posts";
 
 const Blog = () => {
   return (
@@ -6,23 +7,35 @@ const Blog = () => {
       <div className="wrap">
         <h2 className="section-title">Blog</h2>
         <p className="section-note">
-          Short weekly notes on data, frontend, and AI, cross-posted to LinkedIn.
+          Daily notes on how AI is changing the way we work and live, and how to use it well.
         </p>
 
-        <div className="card ticked">
-          <span className="blog-badge">Coming soon</span>
-          <p className="blog-soon">One post a week, starting soon.</p>
-          <p className="lead muted">
-            I am starting a weekly write-up on something in tech close to my work: a data or
-            frontend problem I solved, a pattern worth sharing, or a note on what I am building.
-            Each one goes here and on LinkedIn. Check back shortly, or connect on LinkedIn to catch
-            the first one.
-          </p>
-          <div className="flex gap-4 mt-4 small">
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="link">
-              Follow on LinkedIn
-            </a>
-          </div>
+        <div className="flex flex-col gap-10 mt-2">
+          {posts.map((p) => {
+            const href = `#post-${p.slug}`;
+            return (
+              <article key={p.slug}>
+                <p className="small muted">
+                  {p.dateLabel} · {p.readingTime}
+                </p>
+                <h3 className="text-[22px] font-bold mt-1 mb-2">
+                  <a href={href} className="link">
+                    {p.title}
+                  </a>
+                </h3>
+                <p className="lead">{p.excerpt}</p>
+                <a href={href} className="tree-readmore mt-3 inline-block">
+                  [ read post ]
+                </a>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="flex gap-4 mt-12 small">
+          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="link">
+            Follow on LinkedIn
+          </a>
         </div>
       </div>
     </section>
