@@ -165,17 +165,11 @@ body {
   padding: 0 24px;
 }
 
-/* center the content column within the sidebar layout column (reference-style:
-   a reading column in the middle with margin on both sides, not stranded left) */
+/* left-align content within the sidebar layout column */
 .content .wrap {
-  margin: 0 auto;
-  max-width: 880px;
+  margin: 0;
+  max-width: 1040px;
   padding: 0 clamp(28px, 4vw, 64px);
-}
-
-/* pages that also carry an "On this page" TOC need a wider centered block */
-.content .wrap.cv-wrap {
-  max-width: 1060px;
 }
 
 .section {
@@ -811,139 +805,5 @@ body {
   }
   .nav-links .hide-sm {
     display: none;
-  }
-}
-
-/* ---------- dynamic large-screen scaling ----------
-   The whole UI is px-based, so on a big monitor it otherwise stays small and
-   stranded on the left. These breakpoints scale the sidebar, type, spacing and
-   container widths up with the viewport so the layout uses the resolution. */
-@media (min-width: 1500px) {
-  body {
-    font-size: 17px;
-  }
-  .content .wrap {
-    max-width: 960px;
-  }
-  #about .wrap,
-  .content .wrap.cv-wrap {
-    max-width: 1140px;
-  }
-  .section {
-    padding: 88px 0;
-  }
-  .sidebar {
-    flex-basis: 280px;
-    width: 280px;
-    padding: 40px 32px;
-  }
-  .sidebar-name {
-    font-size: 16px;
-  }
-  .sidebar-nav {
-    font-size: 20px;
-    gap: 18px;
-  }
-  .section-title {
-    font-size: 36px;
-  }
-  .section-note {
-    font-size: 17px;
-  }
-  .lead {
-    font-size: 19px;
-  }
-  .small {
-    font-size: 17px;
-  }
-  .bullets li {
-    font-size: 16px;
-  }
-  .tree {
-    font-size: 16px;
-  }
-  .cv-h2 {
-    font-size: 15px;
-  }
-  .toc-label {
-    font-size: 13px;
-  }
-  .toc-link {
-    font-size: 16px;
-  }
-  .btn {
-    font-size: 15px;
-  }
-  #about .about-layout,
-  #cv-page .about-layout {
-    grid-template-columns: minmax(0, 1fr) 200px;
-  }
-}
-
-@media (min-width: 2000px) {
-  body {
-    font-size: 19px;
-  }
-  .content .wrap {
-    max-width: 1040px;
-  }
-  #about .wrap,
-  .content .wrap.cv-wrap {
-    max-width: 1260px;
-  }
-  .section {
-    padding: 112px 0;
-  }
-  .sidebar {
-    flex-basis: 320px;
-    width: 320px;
-    padding: 48px 40px;
-  }
-  .sidebar-name {
-    font-size: 18px;
-  }
-  .sidebar-nav {
-    font-size: 23px;
-    gap: 22px;
-  }
-  .section-title {
-    font-size: 46px;
-  }
-  .section-note {
-    font-size: 19px;
-  }
-  .lead {
-    font-size: 22px;
-  }
-  .small {
-    font-size: 19px;
-  }
-  .bullets li {
-    font-size: 18px;
-  }
-  .tree {
-    font-size: 18px;
-  }
-  .cv-h2 {
-    font-size: 17px;
-  }
-  .toc-label {
-    font-size: 14px;
-  }
-  .toc-link {
-    font-size: 18px;
-  }
-  .btn {
-    font-size: 17px;
-  }
-  .h1 {
-    font-size: clamp(56px, 4.4vw, 84px);
-  }
-  .hero-intro {
-    font-size: clamp(26px, 1.9vw, 36px);
-  }
-  #about .about-layout,
-  #cv-page .about-layout {
-    grid-template-columns: minmax(0, 1fr) 220px;
   }
 }
