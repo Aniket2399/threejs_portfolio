@@ -165,11 +165,17 @@ body {
   padding: 0 24px;
 }
 
-/* left-align content within the sidebar layout column */
+/* center the content column within the sidebar layout column (reference-style:
+   a reading column in the middle with margin on both sides, not stranded left) */
 .content .wrap {
-  margin: 0;
-  max-width: 1040px;
+  margin: 0 auto;
+  max-width: 880px;
   padding: 0 clamp(28px, 4vw, 64px);
+}
+
+/* pages that also carry an "On this page" TOC need a wider centered block */
+.content .wrap.cv-wrap {
+  max-width: 1060px;
 }
 
 .section {
@@ -808,24 +814,6 @@ body {
   }
 }
 
-/* big screens (e.g. 27" monitors): let the TOC pages use more width and push
-   the "On this page" nav to the right edge, keeping the reading column narrow.
-   Applies to every section with a TOC (My Journey + CV). Placed last so it wins
-   over the base #about/.about-layout rules by source order. */
-@media (min-width: 1400px) {
-  .content .wrap.cv-wrap,
-  #about .wrap {
-    max-width: 1700px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #about .about-layout,
-  #cv-page .about-layout {
-    grid-template-columns: minmax(0, 760px) 190px;
-    justify-content: space-between;
-  }
-}
-
 /* ---------- dynamic large-screen scaling ----------
    The whole UI is px-based, so on a big monitor it otherwise stays small and
    stranded on the left. These breakpoints scale the sidebar, type, spacing and
@@ -835,7 +823,11 @@ body {
     font-size: 17px;
   }
   .content .wrap {
-    max-width: 1320px;
+    max-width: 960px;
+  }
+  #about .wrap,
+  .content .wrap.cv-wrap {
+    max-width: 1140px;
   }
   .section {
     padding: 88px 0;
@@ -884,7 +876,7 @@ body {
   }
   #about .about-layout,
   #cv-page .about-layout {
-    grid-template-columns: minmax(0, 820px) 200px;
+    grid-template-columns: minmax(0, 1fr) 200px;
   }
 }
 
@@ -893,11 +885,11 @@ body {
     font-size: 19px;
   }
   .content .wrap {
-    max-width: 1640px;
+    max-width: 1040px;
   }
-  .content .wrap.cv-wrap,
-  #about .wrap {
-    max-width: 2000px;
+  #about .wrap,
+  .content .wrap.cv-wrap {
+    max-width: 1260px;
   }
   .section {
     padding: 112px 0;
@@ -952,6 +944,6 @@ body {
   }
   #about .about-layout,
   #cv-page .about-layout {
-    grid-template-columns: minmax(0, 960px) 220px;
+    grid-template-columns: minmax(0, 1fr) 220px;
   }
 }
