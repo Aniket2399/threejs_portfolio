@@ -213,10 +213,12 @@ body {
 
 #cv-page .about-main {
   padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 #about .about-main {
   padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 #about .wrap {
@@ -241,12 +243,12 @@ body {
 }
 
 .about-toc {
-  /* short element centered at the viewport middle, rather than a full 100vh
-     block. A 100vh sticky gets pushed up when its container ends (footer coming
-     into view); a short element centered via translateY stays put throughout. */
+  /* short element pinned to the viewport middle. Centered with a fixed top
+     offset (half its ~213px height) rather than transform: translateY, so there
+     is no sticky+transform compositing jank while scrolling. Being short, it
+     never reaches its container end, so it does not ride up at the footer. */
   position: sticky;
-  top: 50vh;
-  transform: translateY(-50%);
+  top: calc(50vh - 106px);
   display: flex;
   flex-direction: column;
   gap: 2px;
