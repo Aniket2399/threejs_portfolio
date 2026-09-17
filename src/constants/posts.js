@@ -1,6 +1,24 @@
 // Blog posts. Newest first. Add a new object to the top of this array each day.
 const posts = [
   {
+    slug: "confident-is-not-competent",
+    title: "Confident Is Not the Same as Competent",
+    date: "2026-09-17",
+    dateLabel: "September 17, 2026",
+    readingTime: "4 min read",
+    excerpt:
+      "AI is on almost every desk now, and most people can make it sound smart. Far fewer can tell a good answer from a confident one. That gap is the real skill.",
+    body: [
+      "You can spot the confident ones fast. They talk about AI easily, they paste a prompt, they get back a clean paragraph or a block of code in seconds, and they nod along like they just watched magic. It reads well, it runs, it sounds sure of itself. So they ship it. The trouble is that sounding sure and being right are two different things, and the tool is very good at the first one.",
+      "The numbers say this out loud. AI is everywhere now, on nearly every desk, in most people's day. Around 45 percent of working adults use it, over 60 percent of service companies have it in the building, and yet only about a third of workers feel confident using it well. Even fewer are actually good at it. The tool got very easy to start and stayed very hard to master. We have adoption a mile wide and an inch deep.",
+      "Here is the thing nobody warns you about: confidence is the cheap part. The model hands you fluent, formatted, authoritative text no matter whether it is correct. It will invent a statistic in the same calm voice it uses for a real one. It will write SQL that runs perfectly and quietly answers the wrong question. Confidence is free. The model gives it away with every response. Competence is what you have to bring.",
+      "Competence looks slower and quieter. It is knowing what to actually ask for, and what context the model needs before it can help. It is reading the output instead of just admiring it. It is knowing where these tools are strong, at drafting, transforming, summarizing, and explaining, and where they are weak, at facts, at math, at the specific messy details of your problem. It is checking the part that would hurt if it were wrong, and owning the result either way.",
+      "I run into this every week with data and code. A model will write me a query that looks clean and returns a tidy number, and the confident move is to drop that number in a dashboard and move on. The competent move is to treat it like work from a sharp but new intern: read it, test it, check the one edge case that always breaks things, and only then trust it. The speed is a gift. The judgment is still mine.",
+      "So if you want to actually get good at this, practice on things you already understand, because that is the only way you will catch the mistakes. Make the model show its reasoning. Treat every answer as a draft to verify, not a verdict to accept. Learn its habits the way you would learn a coworker's. Competence with AI is not a setting you turn on, it is a habit you build one careful check at a time.",
+      "The people who win with these tools will not be the loudest in the room or the quickest to paste an answer. They will be the ones who can look at a confident, well-written response and still ask, quietly, is this actually right. That question is the whole skill. This is post two in a daily set of notes on how AI is changing the way we work, and how to use it well. Confidence is the easy half. Competence is the half worth earning.",
+    ],
+  },
+  {
     slug: "first-we-banned-it",
     title: "First We Banned It, Then We Built With It",
     date: "2026-09-16",
