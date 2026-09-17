@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   profile,
   experience,
@@ -20,11 +20,16 @@ const toc = [
 
 const CV = () => {
   const [active, setActive] = useState(toc[0].id);
+  // while a TOC click is smooth-scrolling, ignore the observer so the active
+  // highlight goes straight to the target instead of bouncing through sections
+  const clicking = useRef(false);
+  const clickTimer = useRef();
 
   useEffect(() => {
     const els = toc.map((s) => document.getElementById(s.id)).filter(Boolean);
     const observer = new IntersectionObserver(
       (entries) => {
+        if (clicking.current) return;
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -38,7 +43,26 @@ const CV = () => {
 
   const goTo = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView();
+    if (!el) return;
+    clicking.current = true;
+    setActive(id);
+    // manual smooth-scroll tween (native smooth is unreliable inside the
+    // flex/grid layout here); animates the same on both TOC pages
+    const startY = window.scrollY;
+    const targetY = el.getBoundingClientRect().top + startY - 24;
+    const dur = 500;
+    const t0 = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - t0) / dur);
+      const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      window.scrollTo(0, startY + (targetY - startY) * ease);
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+    window.clearTimeout(clickTimer.current);
+    clickTimer.current = window.setTimeout(() => {
+      clicking.current = false;
+    }, dur + 150);
   };
 
   const projects = [

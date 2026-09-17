@@ -264,15 +264,24 @@ body {
   font-family: inherit;
   font-size: 15px;
   color: var(--muted);
-  background: transparent;
   border: none;
-  padding: 5px 0;
   cursor: pointer;
-  transition: color 0.2s ease;
+  /* nowrap so toggling the active (bold) state never re-wraps a label and
+     shifts the vertically-centered TOC column up or down */
+  white-space: nowrap;
+  padding: 5px 6px;
+  margin: 0 -6px;
+  /* same sweep-highlight hover as the left sidebar links */
+  background-image: linear-gradient(to right, var(--hl), var(--hl));
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease, color 0.25s ease;
 }
 
 .toc-link:hover {
   color: var(--ink);
+  background-size: 100% 100%;
 }
 
 .toc-link.active {
