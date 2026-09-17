@@ -241,12 +241,14 @@ body {
 }
 
 .about-toc {
+  /* short element centered at the viewport middle, rather than a full 100vh
+     block. A 100vh sticky gets pushed up when its container ends (footer coming
+     into view); a short element centered via translateY stays put throughout. */
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: 50vh;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 2px;
 }
 
