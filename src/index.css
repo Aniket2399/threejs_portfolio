@@ -646,6 +646,17 @@ body {
   border: 1px solid var(--rule);
 }
 
+/* blog post page: use the full content width (not the narrow default) with a
+   generous right margin so long-form content fills the screen and still breathes */
+.content .wrap.blog-post {
+  max-width: none;
+  padding-right: clamp(40px, 8vw, 180px);
+}
+
+.blog-post .lead {
+  max-width: none;
+}
+
 .footer {
   /* persistent footer bar, always visible at the bottom of the viewport
      (like the sticky left sidebar). Solid background + top rule so page

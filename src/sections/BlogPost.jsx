@@ -19,7 +19,7 @@ const BlogPost = ({ slug }) => {
 
   return (
     <section className="section" style={{ borderBottom: "none" }}>
-      <div className="wrap" style={{ maxWidth: 760 }}>
+      <div className="wrap blog-post">
         <p className="tree-root small">
           <a href="#blog" className="link">
             ~/blog
