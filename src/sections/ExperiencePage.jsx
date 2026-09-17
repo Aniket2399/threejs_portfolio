@@ -3,7 +3,7 @@ import { experience } from "../constants";
 const ExperiencePage = () => {
   return (
     <section className="section" style={{ borderBottom: "none" }}>
-        <div className="wrap">
+        <div className="wrap wrap-centered">
           <h1 className="section-title">Experience</h1>
           <p className="section-note">
             5+ years across banking fraud, healthcare, and retail analytics.

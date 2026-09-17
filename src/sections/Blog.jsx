@@ -4,7 +4,7 @@ import { posts } from "../constants/posts";
 const Blog = () => {
   return (
     <section id="blog" className="section">
-      <div className="wrap">
+      <div className="wrap wrap-centered">
         <h2 className="section-title">Blog</h2>
         <p className="section-note">
           Daily notes on how AI is changing the way we work and live, and how to use it well.

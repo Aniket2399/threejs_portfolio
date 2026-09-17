@@ -3,7 +3,7 @@ import { featuredProjects } from "../constants";
 const ProjectsPage = () => {
   return (
     <section className="section" style={{ borderBottom: "none" }}>
-        <div className="wrap">
+        <div className="wrap wrap-centered">
           <h1 className="section-title">Websites</h1>
           <p className="section-note">
             Open a folder to read the full case study, with screenshots and detail.

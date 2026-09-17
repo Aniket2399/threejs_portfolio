@@ -3,7 +3,7 @@ import { skills } from "../constants";
 const Skills = () => {
   return (
     <section id="skills" className="section">
-      <div className="wrap">
+      <div className="wrap wrap-centered">
         <h2 className="section-title">Skills</h2>
         <p className="section-note">Tools I use day to day, grouped by what they are for.</p>
 

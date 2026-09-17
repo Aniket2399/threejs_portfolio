@@ -659,6 +659,13 @@ body {
   max-width: 1000px;
 }
 
+/* section list pages (Skills, Experience, Blog, Websites): centered with margins
+   on both sides instead of left-aligned */
+.content .wrap.wrap-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .blog-post .lead {
   max-width: none;
 }
