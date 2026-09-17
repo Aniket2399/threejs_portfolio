@@ -17,7 +17,7 @@ const profile = {
 };
 
 const navLinks = [
-  { name: "Websites", link: "#projects" },
+  { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
   { name: "Skills", link: "#skills" },
   { name: "My Journey", link: "#about" },
@@ -124,8 +124,45 @@ const featuredProjects = [
 
 const otherProjects = [
   {
+    name: "Flutter Spotify Clone",
+    tech: "Flutter, Dart, Firebase",
+    note: "Cross-platform music app with streaming, playlist management, and auth.",
+    code: "https://github.com/Aniket2399/flutter_spotify_clone",
+  },
+  {
+    name: "Flutter Chat App",
+    tech: "Flutter, Dart, Firebase",
+    note: "Real-time messaging app with Firebase email auth and cloud storage.",
+    code: "https://github.com/Aniket2399/chat_app",
+  },
+  {
+    name: "React Native Mini-Apps",
+    tech: "React Native, TypeScript, Expo",
+    note: "Mobile labs and mini-apps: chat, media library, tab navigation, Clerk auth.",
+    code: "https://github.com/Aniket2399/CS641",
+  },
+  {
+    name: "Budgetify",
+    tech: "React, Node.js, PostgreSQL",
+    note: "Full-stack personal budgeting app with JWT and Firebase social sign-in.",
+    code: "https://github.com/Aniket2399/Budgetify-",
+  },
+  {
+    name: "React Movie App",
+    tech: "React, Vite",
+    note: "Movie browser over an external API with a responsive, filterable UI.",
+    code: "https://github.com/Aniket2399/React_movie_app",
+  },
+  {
+    name: "SQL Data Warehouse",
+    tech: "SQL Server, T-SQL",
+    note: "Modern data warehouse with ETL processes, data modeling, and analytics.",
+    code: "https://github.com/Aniket2399/sql-data-warehouse-project",
+  },
+  {
     name: "GradEase",
-    note: "MERN graduation store with an AI chatbot",
+    tech: "React, Node.js, MongoDB",
+    note: "MERN graduation store with JWT auth, an admin panel, and an AI chatbot.",
     code: "https://github.com/Aniket2399/Grad-Ease",
   },
 ];
