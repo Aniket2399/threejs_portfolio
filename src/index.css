@@ -639,6 +639,12 @@ body {
   font-size: 13px;
 }
 
+/* footer spans the full content width (with side padding) so the right-side
+   links sit at the far right edge instead of stopping mid-page */
+.content .footer .wrap {
+  max-width: none;
+}
+
 /* ---------- profile photo (reference-style matted frame) ---------- */
 
 .photo-frame {
