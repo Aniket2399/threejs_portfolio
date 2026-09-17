@@ -18,7 +18,7 @@ const ProjectDetail = ({ slug }) => {
 
   return (
     <section className="section" style={{ borderBottom: "none" }}>
-        <div className="wrap" style={{ maxWidth: 860 }}>
+        <div className="wrap project-detail">
           <p className="tree-root small">
             <a href="#projects" className="link">
               ~/projects
