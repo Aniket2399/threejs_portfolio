@@ -188,11 +188,13 @@ body {
   padding: 0 clamp(28px, 4vw, 64px);
 }
 
-/* CV uses the same centered content position as the My Journey (About) page */
+/* CV uses the same centered content position as the My Journey (About) page.
+   Wider than the default so it uses more of the screen, but still centered with
+   space kept on both sides (not edge to edge). */
 .content .wrap.cv-wrap {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1000px;
+  max-width: 1300px;
 }
 
 .section {
@@ -224,7 +226,7 @@ body {
 #about .wrap {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1000px;
+  max-width: 1300px;
 }
 
 #about .lead {
