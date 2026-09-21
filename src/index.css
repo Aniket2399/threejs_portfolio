@@ -191,26 +191,30 @@ body {
 
 .latest-marquee {
   overflow: hidden;
-  /* fade out only on the right so it reads as running off the edge */
-  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 80px), transparent);
-  mask-image: linear-gradient(to right, #000 calc(100% - 80px), transparent);
 }
 
 .latest-track {
   display: flex;
-  width: max-content;
+  gap: 24px;
   /* transform + transition are driven from JS (stepped slide) */
   will-change: transform;
 }
 
 .post-card {
-  flex: 0 0 320px;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 4px 40px 4px 0;
+  padding: 20px;
+  border: 1px dashed var(--rule);
+  background: var(--surface);
   color: var(--ink);
   text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.post-card:hover {
+  border-color: var(--ink);
 }
 
 .latest-date {

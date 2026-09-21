@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { profile } from "../constants";
 import { posts } from "../constants/posts";
 
@@ -9,7 +9,7 @@ const ArrowIcon = ({ dir = "right" }) => (
   </svg>
 );
 
-const STEP = 320; // card width in px (matches .post-card)
+const GAP = 24; // px gap between cards (matches .latest-track gap)
 const INTERVAL = 3000; // auto-advance one card every 3s
 const EASE_MS = 700; // slide transition, like the reference
 
@@ -18,8 +18,25 @@ const Hero = () => {
   const reps = Math.max(4, Math.ceil(16 / L));
   const loop = Array.from({ length: reps }).flatMap(() => posts);
 
+  const marqueeRef = useRef(null);
+  const [cardW, setCardW] = useState(300);
   const [idx, setIdx] = useState(L); // start one set in, so "prev" has room
   const [animate, setAnimate] = useState(true);
+
+  // size cards so exactly N fill the width (3 on desktop, 2 on tablet, 1 on mobile)
+  useEffect(() => {
+    const measure = () => {
+      const w = marqueeRef.current?.clientWidth || 0;
+      if (!w) return;
+      const vis = w < 640 ? 1 : w < 1024 ? 2 : 3;
+      setCardW(Math.round((w - (vis - 1) * GAP) / vis));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  const step = cardW + GAP;
 
   const go = (d) => setIdx((i) => i + d);
 
@@ -28,7 +45,6 @@ const Hero = () => {
     return () => clearInterval(id);
   }, []);
 
-  // re-enable the transition on the frame after a no-transition snap
   useEffect(() => {
     if (!animate) {
       const r = requestAnimationFrame(() => requestAnimationFrame(() => setAnimate(true)));
@@ -36,7 +52,7 @@ const Hero = () => {
     }
   }, [animate]);
 
-  // after each slide finishes, snap back into the middle set (seamless loop)
+  // seamless loop: after a slide finishes, snap back into the middle set
   const onSettle = () => {
     if (idx >= 2 * L) {
       setAnimate(false);
@@ -55,22 +71,22 @@ const Hero = () => {
         <p className="hero-intro mt-6">{profile.blurb}</p>
       </div>
 
-      {/* Latest posts carousel: full-width to the right, left edge aligned with
-          the intro text; slides one card at a time like the reference */}
+      {/* Latest posts carousel: shows three cards at a time and slides one at a
+          time, like the reference */}
       <div className="latest">
         <h2 className="latest-heading">Latest posts</h2>
 
-        <div className="latest-marquee">
+        <div className="latest-marquee" ref={marqueeRef}>
           <div
             className="latest-track"
             style={{
-              transform: `translateX(-${idx * STEP}px)`,
+              transform: `translateX(-${idx * step}px)`,
               transition: animate ? `transform ${EASE_MS}ms ease` : "none",
             }}
             onTransitionEnd={onSettle}
           >
             {loop.map((p, i) => (
-              <a key={`${p.slug}-${i}`} href={`#post-${p.slug}`} className="post-card">
+              <a key={`${p.slug}-${i}`} href={`#post-${p.slug}`} className="post-card" style={{ width: cardW }}>
                 <span className="latest-date">{p.dateLabel}</span>
                 <span className="post-card-title">{p.title}</span>
                 <span className="latest-desc">{p.excerpt}</span>
