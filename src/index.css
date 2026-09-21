@@ -174,8 +174,12 @@ body {
 
 /* ---------- latest posts (home) ---------- */
 
+/* Latest posts carousel (home). Full-width to the right; left edge aligned with
+   the intro text via the same left padding the .wrap uses. Borderless sliding
+   cards, like the reference. */
 .latest {
   margin-top: 56px;
+  padding-left: clamp(28px, 4vw, 64px);
 }
 
 .latest-heading {
@@ -185,49 +189,28 @@ body {
   margin-bottom: 16px;
 }
 
-/* horizontal card marquee that scrolls right to left, pauses on hover, and
-   fades out at both edges */
 .latest-marquee {
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
-  mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+  /* fade out only on the right so it reads as running off the edge */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 80px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 80px), transparent);
 }
 
 .latest-track {
   display: flex;
-  gap: 20px;
   width: max-content;
-  animation: latest-scroll 34s linear infinite;
-}
-
-.latest-marquee:hover .latest-track {
-  animation-play-state: paused;
-}
-
-@keyframes latest-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  /* transform + transition are driven from JS (stepped slide) */
+  will-change: transform;
 }
 
 .post-card {
-  flex: 0 0 340px;
+  flex: 0 0 320px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 22px;
-  border: 1px dashed var(--rule);
-  background: var(--surface);
+  padding: 4px 40px 4px 0;
   color: var(--ink);
   text-decoration: none;
-  transition: border-color 0.2s ease;
-}
-
-.post-card:hover {
-  border-color: var(--ink);
 }
 
 .latest-date {
@@ -252,14 +235,18 @@ body {
 }
 
 .post-card-read {
-  margin-top: auto;
-  padding-top: 14px;
+  margin-top: 8px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 13px;
   opacity: 0.55;
   transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.post-card:hover .post-card-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .post-card:hover .post-card-read {
@@ -271,15 +258,6 @@ body {
   display: inline-block;
   margin-top: 20px;
   font-size: 14px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .latest-track {
-    animation: none;
-  }
-  .latest-marquee {
-    overflow-x: auto;
-  }
 }
 
 /* ---------- layout ---------- */
