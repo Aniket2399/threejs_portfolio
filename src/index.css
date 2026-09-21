@@ -166,11 +166,87 @@ body {
   margin-top: auto;
 }
 
-/* home page: vertically center the short intro in the available space */
+/* home page: fill at least the viewport so the footer sits at the bottom, but
+   flow content from the top (intro + latest posts) rather than vertically center */
 #top.section {
   flex: 1;
+}
+
+/* ---------- latest posts (home) ---------- */
+
+.latest {
+  margin-top: 56px;
+  max-width: 640px;
+}
+
+.latest-heading {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.latest-list {
+  border-bottom: 1px dashed var(--rule);
+}
+
+.latest-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px dashed var(--rule);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.latest-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.latest-date {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.latest-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 3px 0;
+}
+
+.latest-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.7;
+  max-width: 52ch;
+}
+
+.latest-arrow {
+  flex: 0 0 auto;
+  display: inline-flex;
+  color: var(--ink);
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.latest-item:hover .latest-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.latest-item:hover .latest-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.latest-all {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 14px;
 }
 
 /* ---------- layout ---------- */
