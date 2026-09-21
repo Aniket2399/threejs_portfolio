@@ -1,6 +1,24 @@
 // Blog posts. Newest first. Add a new object to the top of this array each day.
 const posts = [
   {
+    slug: "builders-asked-it-to-slow-down",
+    title: "The People Building It Just Asked It to Slow Down",
+    date: "2026-09-21",
+    dateLabel: "September 21, 2026",
+    readingTime: "4 min read",
+    excerpt:
+      "The heads of Anthropic, OpenAI, and xAI rarely agree on anything. This month they agreed on one thing: give the most powerful AI a little more time. That is worth noticing.",
+    body: [
+      "There is a strange new sound in the AI world this month, and it is the sound of the accelerator easing off. Dario Amodei, who runs Anthropic, has been arguing that the most powerful systems should be built more slowly. Sam Altman of OpenAI and Elon Musk of xAI, two people not known for agreeing with him or with each other, said more or less the same thing. They are calling it pacing: leaving more room for safety work as the models get stronger. When the people racing each other hardest all reach for the brakes at once, it is worth sitting up.",
+      "It is easy to be cynical about this. Slowing down is convenient to ask for when you are already in the lead, and not everyone is playing along. China has pushed back on calls to ease off frontier development, reading them as a way to freeze an American advantage in place. The UN has asked governments to rein in AI agents, and the US and China have floated a hotline for AI incidents serious enough to touch national security. So the same week the builders talked about pacing, the governments started reaching for the wheel too. Everyone suddenly wants a hand on the throttle.",
+      "But strip away the politics and there is a real signal underneath. For three years the only direction that mattered was faster. More parameters, longer context, higher benchmarks, shipped sooner. The fact that the conversation has shifted at all, from how fast can we go to how fast should we, is a kind of maturity the field did not have a year ago. It is the difference between a teenager with a new license and a driver who has finally noticed the road has other people on it.",
+      "I think about this at a much smaller scale in my own work, and the lesson rhymes. The fastest way to ship is almost never the best way. The model writes the code in seconds, and the temptation is to merge it just as fast. The discipline is to slow down for the part that matters, to read it, test it, and understand it before it goes live. Speed is a tool, not a virtue. Pacing yourself is not falling behind. It is the thing that keeps you from shipping a fast mistake.",
+      "That is really what pacing means for the rest of us, the people who use these tools rather than build them. It is permission to not treat every new model as a mandate to move faster and think less. The tools will keep getting quicker. Our judgment does not have to. You can adopt something powerful and still decide, deliberately, where you slow down: the decision you cannot easily undo, the number that will end up in front of a customer, the code that touches money.",
+      "The healthiest thing about this month is not that anyone will actually pump the brakes hard. They probably will not, and the competition is too fierce for that. The healthy part is that caution stopped being an embarrassing thing to say out loud. For a long time worrying about AI marked you as a skeptic or a laggard. Now the fastest builders in the world are saying it plainly, and that gives everyone else room to be thoughtful without feeling left behind.",
+      "So take the hint. Move fast where a mistake is cheap, and slow down where it is not. The people building this stuff just admitted, out loud and together, that not every second of speed is worth it. That might be the most useful thing they have shipped all year. This is post three in a daily set of notes on how AI is changing the way we work, and how to use it well.",
+    ],
+  },
+  {
     slug: "confident-is-not-competent",
     title: "Confident Is Not the Same as Competent",
     date: "2026-09-17",
