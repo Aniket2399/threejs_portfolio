@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const getInitial = () =>
   (typeof document !== "undefined" && document.documentElement.getAttribute("data-theme")) ||
-  "dark";
+  "light";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(getInitial);
