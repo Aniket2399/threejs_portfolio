@@ -1,10 +1,10 @@
 import { profile } from "../constants";
 import { posts } from "../constants/posts";
 
-// lightweight inline markup: **bold** and ==highlight==
+// lightweight inline markup: **bold**, ==highlight==, and _italic_
 const renderRich = (text) => {
   const parts = [];
-  const re = /(\*\*[^*]+\*\*|==[^=]+==)/g;
+  const re = /(\*\*[^*]+\*\*|==[^=]+==|_[^_]+_)/g;
   let last = 0;
   let m;
   let key = 0;
@@ -12,7 +12,8 @@ const renderRich = (text) => {
     if (m.index > last) parts.push(text.slice(last, m.index));
     const tok = m[0];
     if (tok.startsWith("**")) parts.push(<strong key={key++}>{tok.slice(2, -2)}</strong>);
-    else parts.push(<mark className="hl" key={key++}>{tok.slice(2, -2)}</mark>);
+    else if (tok.startsWith("==")) parts.push(<mark className="hl" key={key++}>{tok.slice(2, -2)}</mark>);
+    else parts.push(<em key={key++}>{tok.slice(1, -1)}</em>);
     last = m.index + tok.length;
   }
   if (last < text.length) parts.push(text.slice(last));
