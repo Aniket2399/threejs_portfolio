@@ -20,7 +20,7 @@
   --head-fg: #e7eee3;
   --nav-bg: rgba(231, 238, 227, 0.9);
   --hl: rgba(43, 94, 70, 0.14);
-  --mark: rgba(138, 100, 27, 0.22);
+  --mark: #bfe6d1;
   --max: 1060px;
 }
 
@@ -36,7 +36,7 @@
   --head-fg: #e7eee3;
   --nav-bg: rgba(18, 23, 15, 0.9);
   --hl: rgba(134, 189, 159, 0.18);
-  --mark: rgba(217, 177, 104, 0.28);
+  --mark: #33604a;
 }
 
 html {
@@ -801,7 +801,9 @@ body {
 .blog-post .hl {
   background: var(--mark);
   color: var(--ink);
-  padding: 0.05em 0.28em;
+  font-weight: 700;
+  font-size: 1.15em;
+  padding: 0.05em 0.3em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
