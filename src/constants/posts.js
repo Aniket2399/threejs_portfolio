@@ -1,6 +1,24 @@
 // Blog posts. Newest first. Add a new object to the top of this array each day.
 const posts = [
   {
+    slug: "taking-apart-nba-2k",
+    title: "Taking Apart NBA 2K",
+    date: "2026-09-24",
+    dateLabel: "September 24, 2026",
+    readingTime: "4 min read",
+    excerpt:
+      "I have been pulling apart NBA 2K to understand how it stores animation and motion capture, and what I can borrow from it for my own projects.",
+    body: [
+      "I have a habit I mention on my home page: I like taking things apart to see how they work. Lately the thing on my desk is NBA 2K. Not to play it, though I do plenty of that, but to understand it. Every time a player rises for a jump shot the motion looks uncannily real, and I wanted to know where that realism actually lives inside the game.",
+      "So I started digging. Underneath a basketball game like this is a mountain of animation data, and most of it comes from motion capture: real players wearing markers, their movement recorded frame by frame and turned into numbers a computer can replay. I wanted to see how that data is stored, how a single jump shot goes from a person in a mocap suit to a few kilobytes on disk that the engine can play back a thousand different ways.",
+      "The reality of this kind of work is that nobody hands you a manual. The formats are undocumented, packed and compressed for the engine and not for a curious outsider. So it becomes detective work: open a file, stare at the bytes, look for patterns, guess where one animation clip ends and the next begins, and find the skeleton that all the motion hangs on. It is slow, it is frustrating, and it is honestly some of the most fun I have had in months.",
+      "What keeps surprising me is how elegant the underlying idea is. A movement is really just a skeleton, a set of joints, and a timeline of how each joint rotates over time. Motion capture records the real thing, the game stores it as keyframes, and then it blends between them so a player can flow from a dribble to a step back to a shot without any of it looking stitched together. Once you see motion as data, you cannot unsee it. A jump shot becomes a small, oddly beautiful table of numbers.",
+      "I am doing this because I want to use what I learn in my own projects. I build sports analytics tools, and understanding how motion is captured and represented changes how I think about showing it. If I can read how the pros structure and blend movement, I can borrow the ideas, the data shapes and the math, and apply them to things I am building myself, from smoother motion in a dashboard to representing real player movement in a project of my own.",
+      "AI has quietly become my co-investigator in this. When I hit a wall on an unfamiliar binary format, or a chunk of linear algebra I have not touched since school, I talk it through with an AI coding tool the same way I would with a sharp colleague. It does not hand me the answer, and it should not, but it helps me form better guesses faster and keeps me moving when I would otherwise be stuck staring at a hex dump at midnight.",
+      "That is really the throughline of everything I write here. Curiosity plus the patience to take something apart is how you learn to build. The game just happens to be the thing I am pulling apart this week. Next week it will be something else. If you have ever wondered how the magic inside a piece of software actually works, my advice is simple: open it up and find out.",
+    ],
+  },
+  {
     slug: "builders-asked-it-to-slow-down",
     title: "The People Building It Just Asked It to Slow Down",
     date: "2026-09-21",
