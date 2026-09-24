@@ -1,6 +1,24 @@
 import { profile } from "../constants";
 import { posts } from "../constants/posts";
 
+// lightweight inline markup: **bold** and ==highlight==
+const renderRich = (text) => {
+  const parts = [];
+  const re = /(\*\*[^*]+\*\*|==[^=]+==)/g;
+  let last = 0;
+  let m;
+  let key = 0;
+  while ((m = re.exec(text))) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    const tok = m[0];
+    if (tok.startsWith("**")) parts.push(<strong key={key++}>{tok.slice(2, -2)}</strong>);
+    else parts.push(<mark className="hl" key={key++}>{tok.slice(2, -2)}</mark>);
+    last = m.index + tok.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+};
+
 const BlogPost = ({ slug }) => {
   const p = posts.find((x) => x.slug === slug);
 
@@ -35,7 +53,7 @@ const BlogPost = ({ slug }) => {
         <div className="flex flex-col gap-5">
           {p.body.map((para, i) => (
             <p className="lead" key={i}>
-              {para}
+              {renderRich(para)}
             </p>
           ))}
         </div>
