@@ -804,6 +804,25 @@ body {
   color: var(--accent);
 }
 
+/* in-post image with caption */
+.post-figure {
+  margin: 32px 0 8px;
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px dashed var(--rule);
+}
+
+.post-figure figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .blog-post .hl {
   background: var(--mark);
   color: var(--ink);

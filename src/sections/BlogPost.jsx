@@ -59,6 +59,13 @@ const BlogPost = ({ slug }) => {
           ))}
         </div>
 
+        {p.image && (
+          <figure className="post-figure">
+            <img src={p.image.src} alt={p.image.alt} loading="lazy" />
+            {p.image.caption && <figcaption>{p.image.caption}</figcaption>}
+          </figure>
+        )}
+
         <div className="flex flex-wrap gap-3 mt-12">
           <a href="#blog" className="btn btn-primary">
             Back to blog

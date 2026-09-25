@@ -14,9 +14,16 @@ const posts = [
       "The reality of this kind of work is that nobody hands you a manual. The formats are undocumented, packed and compressed for the engine and not for a curious outsider. So it becomes **detective work**: open a file, stare at the bytes, look for patterns, guess where one animation clip ends and the next begins, and find the skeleton that all the motion hangs on. It is slow, it is frustrating, and it is honestly _some of the most fun I have had in months_.",
       "What keeps surprising me is how elegant the underlying idea is. A movement is really just a skeleton, a set of joints, and a timeline of how each joint rotates over time. Motion capture records the real thing, the game stores it as keyframes, and then it blends between them so a player can flow from a dribble to a step back to a shot without any of it looking stitched together. **Once you see motion as data, you cannot unsee it.** A jump shot becomes a small, oddly beautiful table of numbers.",
       "I am doing this because I want to **use what I learn in my own projects**. I build sports analytics tools, and understanding how motion is captured and represented changes how I think about showing it. If I can read how the pros structure and blend movement, I can borrow the ideas, the data shapes and the math, and apply them to things I am building myself, from smoother motion in a dashboard to representing real player movement in a project of my own.",
+      "Right now I am past just reading the files. I have the model and his moves running in a small game of my own in Unreal Engine, a Jordan 23 build on a practice court, and I am deep in the unglamorous half: **lighting, materials, and making the whole scene look right**. I am building it on an M3 MacBook Air, a lovely laptop that is _not a rendering rig_, so I am wrestling with real performance and rendering limits on a modest CPU and GPU. It is slow going, and honestly that is part of the fun.",
       "AI has quietly become my _co-investigator_ in this. When I hit a wall on an unfamiliar binary format, or a chunk of linear algebra I have not touched since school, I talk it through with an AI coding tool the same way I would with a sharp colleague. **It does not hand me the answer, and it should not**, but it helps me form better guesses faster and keeps me moving when I would otherwise be stuck staring at a hex dump at midnight.",
       "That is really the throughline of everything I write here. **Curiosity plus the patience to take something apart is how you learn to build.** The game just happens to be the thing I am pulling apart this week. Next week it will be something else. If you have ever wondered how the magic inside a piece of software actually works, my advice is simple: _open it up and find out_.",
     ],
+    image: {
+      src: "/images/jordan-court-ue5.jpg",
+      alt: "Early Unreal Engine build of a Jordan 23 basketball game on a practice court",
+      caption:
+        "An early build in Unreal Engine, running the extracted model and moves. A Jordan 23 on a practice court, with lighting and rendering still a work in progress on an M3 MacBook Air.",
+    },
   },
   {
     slug: "builders-asked-it-to-slow-down",
