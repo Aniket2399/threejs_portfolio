@@ -3,17 +3,17 @@
 
 const profile = {
   name: "Aniket Kshirsagar",
-  role: "Data Analyst with Full Stack Developer",
+  role: "Full Stack Developer",
   location: "New Jersey, USA",
   email: "aniket.kshirsagar.work08@gmail.com",
   linkedin: "https://linkedin.com/in/aniketk99",
   github: "https://github.com/Aniket2399",
   cv: "/Aniket-Kshirsagar-Resume.pdf",
   blurb:
-    "I have always liked taking things apart to see how they work, then putting them back together like Lego. These days I do it with software and data: pulling messy problems into pieces and rebuilding them into something people can actually use. When I am not, I am probably watching or playing football or basketball.",
+    "I have always liked taking things apart to see how they work, then putting them back together like Lego. These days I do it with software: pulling messy problems into pieces and rebuilding them into something people can actually use. When I am not, I am probably watching or playing football or basketball.",
   blurb2: "",
   summary:
-    "Data analyst and full-stack developer with 5+ years turning complex data into decisions across banking, healthcare, and retail, and building the front end that delivers them. SQL and Python drive the analysis; React, Next.js, TypeScript, and Tailwind build the custom, interactive dashboards that present it, with FastAPI and AI-agent systems on the backend, the same stack behind my analytics platforms (PepStats, COURTSIDE, SelfPrep). I judge every project by whether it changed what someone did, and by whether the interface made that effortless.",
+    "Full-stack developer with an MS in Computer Science and 5+ years building web applications end to end, with React, Next.js, and TypeScript front ends over Python and Node.js services and REST APIs. I ship clean, well-tested code backed by automated tests, monitoring, and code review, from a founding engineering role at Astoria AI to production systems at scale at JP Morgan Chase. I work daily with AI coding tools, have built LLM-powered and voice-agent features, and care about turning messy data and unpredictable model output into fast, reliable, polished products.",
 };
 
 const navLinks = [
@@ -170,84 +170,87 @@ const otherProjects = [
 const experience = [
   {
     company: "JP Morgan Chase",
-    role: "Senior Data Analyst",
+    role: "Full Stack Developer",
     place: "New Jersey, USA",
     date: "Mar 2026 to Present",
     bullets: [
-      "Traced where fraud detection rules misfired and rebuilt them, lifting accuracy 28% so investigators could focus on the cases that mattered.",
-      "Replaced slow manual checks with automated, standardized monitoring across every banking channel, cutting investigation effort 22%.",
-      "Surfaced fraud anomalies early through shared dashboards, helping the business cut fraud-related exposure roughly 15% over the year.",
+      "Build and operate back-end services and tools over large-scale financial data in Python and SQL, with the monitoring and testing that keep them reliable in a regulated production environment.",
+      "Rebuilt fraud-detection logic to improve accuracy 28% and automated workflows that cut manual effort 22%, owning each outcome end to end.",
+      "Shipped custom React dashboards that surface fraud trends early, helping the business cut fraud-related exposure roughly 15% over the year.",
     ],
   },
   {
     company: "Astoria AI",
-    role: "Full Stack Developer",
+    role: "Founding Full Stack Engineer (GenAI)",
     place: "New York, USA (Remote)",
     date: "Sep 2025 to Feb 2026",
     bullets: [
-      "Took promising AI-agent prototypes to production as reliable services that automate real recruiting workflows end to end.",
-      "Built a pipeline that advances candidates automatically with scheduled reminders, removing most manual coordination.",
-      "Shipped a single dashboard to monitor and operate every agent, secured behind OAuth-protected APIs.",
+      "Built full-stack features end to end with React and TypeScript front ends over Python and Node.js services and REST APIs, taking AI-agent prototypes all the way to reliable production.",
+      "Built LLM-powered, agent-driven features around unpredictable, streaming model output, backed by automated tests, logging, monitoring, and alerting.",
+      "Shipped a single dashboard to operate every agent behind OAuth-protected APIs, handling async, event-driven work on the backend.",
     ],
   },
   {
     company: "JPMorgan Chase",
-    role: "Data Analyst Intern (Part-Time)",
+    role: "Data Analyst Intern",
     place: "New York, USA (Remote)",
     date: "May 2024 to Aug 2024",
     bullets: [
-      "Diagnosed slow production reporting queries with execution plans, pinpointing full table scans, inefficient joins, and missing predicates.",
+      "Profiled slow production SQL with execution plans, pinpointing full table scans, inefficient joins, and missing predicates.",
       "Rewrote query logic (subqueries to joins, earlier filters) and added composite and covering indexes, materially cutting runtime and dashboard load times.",
       "Built Tableau dashboards to stakeholder requirements, enabling self-service access that previously required manual SQL pulls.",
     ],
   },
   {
     company: "Capgemini",
-    role: "Data Analyst",
+    role: "Frontend Developer",
     place: "India",
     date: "Jan 2022 to Jul 2023",
     bullets: [
-      "Automated healthcare reporting end to end, cutting effort nearly 28% and giving stakeholders numbers they could trust.",
-      "Consolidated fragmented source systems with Azure Data Factory into clean, analytics-ready data the enterprise could depend on.",
-      "Segmented patients and modeled cohorts in Python to point interventions toward the highest-risk groups first.",
+      "Built and optimized React dashboards and front-end views for enterprise reporting, turning fragmented data into clean, responsive interfaces.",
+      "Wrote Selenium UI test automation to keep the front end reliable across releases, and automated recurring workflows in Python to cut manual effort nearly 28%.",
+      "Partnered with stakeholders to ship consistent, trustworthy views they could act on without re-checking the numbers by hand.",
     ],
   },
   {
     company: "Accenture",
-    role: "Junior Data Analyst",
+    role: "Web Developer",
     place: "India",
     date: "Aug 2019 to Dec 2021",
     bullets: [
-      "Built Tableau charts and dashboards to each requirement, turning raw datasets into clear visuals the team could act on.",
-      "Ran careful data validation (nulls, duplicates, stray whitespace) so the data feeding the models started clean and consistent.",
+      "Built dashboards and web views to each requirement, turning raw datasets into clear, readable interfaces the whole team could act on.",
+      "Ran careful data validation (nulls, duplicates, stray whitespace) so the data behind every view started clean, consistent, and trustworthy.",
       "Fed that validated data to the Python models the data engineers built, improving how efficiently and accurately they ran.",
     ],
   },
 ];
 
 const skills = [
-  { group: "Languages", items: ["Python", "SQL", "JavaScript", "TypeScript", "R"] },
-  { group: "BI and Viz", items: ["Tableau", "Power BI", "Looker", "Matplotlib", "Seaborn"] },
-  { group: "Data", items: ["pandas", "NumPy", "Excel (Advanced)", "Power Query"] },
+  { group: "Languages", items: ["Python", "JavaScript", "TypeScript", "Java", "C++", "Node.js", "SQL"] },
   {
-    group: "Web and App Dev",
-    items: ["React", "Next.js", "Node.js", "FastAPI", "Tailwind", "REST APIs", "OAuth 2.0"],
+    group: "Frontend",
+    items: ["React", "Next.js", "Redux", "TailwindCSS", "shadcn/ui", "React Native", "Flutter", "Responsive UI"],
+  },
+  {
+    group: "Backend and APIs",
+    items: ["REST APIs", "FastAPI", "Node.js and Express", "PostgreSQL", "MongoDB", "Event-Driven (Kafka)", "System Design"],
+  },
+  {
+    group: "Auth and Cloud",
+    items: ["OAuth", "JWT", "Firebase Auth", "AWS (S3, Glue, Redshift, Athena)", "Docker", "CI/CD (GitHub Actions)"],
+  },
+  {
+    group: "Practices",
+    items: ["Automated Testing", "Monitoring and Observability", "Code Review", "Git", "Agile", "Documentation"],
   },
   {
     group: "AI",
-    items: ["LLM and agentic AI", "RAG", "Vapi AI", "Google Gemini", "NLP"],
+    items: ["LLM-Powered Features", "AI Coding Tools (Claude Code)", "Vapi Voice Agents", "RAG", "NLP"],
   },
-  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQL Server", "Oracle", "DuckDB"] },
   {
-    group: "Cloud and Big Data",
-    items: ["AWS (S3, Redshift, Athena, Glue)", "Azure", "BigQuery", "PySpark", "Hive"],
+    group: "CS Fundamentals",
+    items: ["Data Structures and Algorithms", "OOP", "System Design"],
   },
-  { group: "ETL and Modeling", items: ["Azure Data Factory", "dbt", "ETL pipelines"] },
-  {
-    group: "Statistics",
-    items: ["Hypothesis testing", "Regression", "A/B testing", "Forecasting"],
-  },
-  { group: "Other", items: ["Ravelin", "Git", "CI/CD", "Jira", "Agile"] },
 ];
 
 const education = [

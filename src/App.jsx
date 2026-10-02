@@ -26,7 +26,7 @@ const PAGES = {
 };
 
 const BASE = "Aniket Kshirsagar";
-const TAGLINE = `${BASE} - Data Analyst with Full Stack Developer`;
+const TAGLINE = `${BASE} - Full Stack Developer`;
 
 const titleFor = (hash) => {
   if (hash === "#resume" || hash === "#cv") return `${BASE} - Resume`;

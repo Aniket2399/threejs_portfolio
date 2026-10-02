@@ -12,20 +12,20 @@ const sections = [
   },
   {
     id: "falling-for-data",
-    title: "Falling for data",
-    toc: "Falling for data",
+    title: "Finding the craft",
+    toc: "Finding the craft",
     body: [
-      "My first real job was as a junior data analyst at Accenture, cleaning messy retail data and turning it into Tableau dashboards people could act on. At Capgemini I automated healthcare reporting end to end and learned the lesson that still drives me: the win is never the chart, it is whether someone changed a decision because of it.",
-      "That is also where I got comfortable with the unglamorous half of analytics: validating inputs, handling nulls and duplicates, and building pipelines that stay trustworthy even when the source data does not. I learned to care less about a clever model and more about whether the numbers were clean enough to bet on, and whether the person reading them actually knew what to do next.",
+      "My first real jobs were in web and front-end work. At Accenture I built dashboards and web views out of messy data, and at Capgemini I moved into front-end proper, building React interfaces for enterprise reporting and writing the UI test automation that kept them reliable release after release.",
+      "That is where I learned the unglamorous half of shipping software: validating inputs, handling the edge cases, and building things people can trust even when the data behind them is a mess. I cared less about a clever chart and more about whether the thing worked, loaded fast, and told someone exactly what to do next.",
     ],
   },
   {
     id: "learning-to-build",
-    title: "Learning to build, not just analyze",
-    toc: "Learning to build",
+    title: "Owning the whole stack",
+    toc: "Owning the stack",
     body: [
-      "I moved to New York for a master's in computer science at Pace, and the more I analyzed data, the more I wanted to own the whole thing, from the raw pipeline to the interface people click. So I started building: a data analyst internship at JPMorgan tuning SQL until dashboards loaded fast, a founding full-stack engineer role at Astoria AI taking LLM agents to production, and analytics platforms of my own that go from raw events all the way to a live product.",
-      "Building those made me a better analyst and a real engineer at the same time. I stopped handing off a spreadsheet and started shipping the thing people actually use: React and Next.js front ends, FastAPI services, dbt and DuckDB pipelines, all tested and deployed. PepStats, COURTSIDE, and SelfPrep each began as a question I wanted answered and ended as a product anyone could open. Once you have owned an insight from the raw event to the button someone clicks, you never see analysis the same way again.",
+      "I moved to New York for a master's in computer science at Pace, and the more I built, the more I wanted to own the whole stack, from the service and the data behind it to the interface people click. So I went deeper: a founding full stack engineer role at Astoria AI taking LLM agents to production, a summer at JPMorgan tuning SQL until dashboards loaded fast, and full-stack products of my own that go from raw events all the way to a live app.",
+      "Those turned me into a real engineer. I stopped handing off a spreadsheet and started shipping the thing people actually use: React and Next.js front ends, Node and FastAPI services, REST APIs, all tested, monitored, and deployed. SelfPrep, PepStats, and COURTSIDE each began as a question I wanted answered and ended as a product anyone could open. Once you have owned something from the backend to the button someone clicks, you never want to build just one layer again.",
     ],
   },
   {
@@ -33,8 +33,8 @@ const sections = [
     title: "Where I am now",
     toc: "Where I am now",
     body: [
-      "Today I am a senior data analyst at JPMorgan Chase working on fraud analytics, rebuilding detection rules and the dashboards that surface anomalies before they cost the business. On nights and weekends I am usually deep in React and Next.js, turning a dataset into something you can actually explore.",
-      "The fraud work is the analyst in me: trace where the rules misfire, cut the false positives that drain investigators, and get the signal in front of the right people early enough to matter. The side projects are the builder in me refusing to sit still. Between the two I get to run the full loop every week, from the question to the query to the interface that answers it.",
+      "Today I am a full stack developer at JP Morgan Chase, building and operating back-end services and the React dashboards on top of them, in a high-stakes, heavily regulated environment where reliability is not optional. On nights and weekends I am usually deep in React, Next.js, and whatever I am currently taking apart to rebuild.",
+      "The day job is the engineer in me: write clean, tested code, keep it monitored and reliable, and make technical decisions I can explain to anyone. The side projects are the builder in me refusing to sit still. Between the two I get to run the full loop every week, from the problem to the service to the interface that solves it.",
     ],
   },
   {
@@ -42,8 +42,8 @@ const sections = [
     title: "What I am pursuing",
     toc: "What I am pursuing",
     body: [
-      "I want to keep living in both worlds, the analysis and the interface. My goal is to build data products end to end, where the insight and the experience of using it are designed together, not bolted on after the fact.",
-      "Concretely, I am looking for a role where I can own a data product from the pipeline to the polished front end: a data or analytics team that cares about a strong interface, or a product team that wants someone who genuinely understands the data underneath. Either way I care about the same thing, shipping something people use to make a better decision. If that sounds like your team, I would love to talk.",
+      "I want to keep building full stack, where the backend, the data, and the interface are designed together rather than bolted on after the fact. My goal is to own features end to end and ship software people actually reach for.",
+      "Concretely, I am looking for a frontend, backend, or full-stack engineering role on a team that cares about craft and moves fast, somewhere I can build real products, work with AI tooling instead of around it, and sweat the small details that make software feel good to use. If that sounds like your team, I would love to talk.",
     ],
   },
 ];
