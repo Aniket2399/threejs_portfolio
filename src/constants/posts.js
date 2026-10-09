@@ -1,6 +1,24 @@
 // Blog posts. Newest first. Add a new object to the top of this array each day.
 const posts = [
   {
+    slug: "what-i-automate-and-what-i-wont",
+    title: "What I Automate, and What I Won't",
+    date: "2026-10-08",
+    dateLabel: "October 8, 2026",
+    readingTime: "4 min read",
+    excerpt:
+      "AI can touch almost every part of how I build now. That does not mean it should. Here is where I hand it the work, and the part I keep for myself on purpose.",
+    body: [
+      "I build software for a living, and AI has quietly worked its way into most of my day. It drafts code, writes tests, explains a stack trace, renames things, and answers the question I would have spent twenty minutes searching for. A new update this week even lets you script the coding agent itself, hooking into how it works. The tools can reach almost everywhere now. So the interesting question stopped being **what can I automate** and became **what should I**.",
+      "The honest answer is that I automate the work that is real but not the point. The boilerplate. The first rough draft of a function I already know the shape of. The test cases I would have written by hand anyway. Renaming a variable across forty files. Translating an error message into a plausible cause. _This is the busywork between me and the actual problem_, and handing it off is pure gain. I am faster and, weirdly, more patient, because I am not worn down by the tedious parts before I reach the hard one.",
+      "I also automate the things I am bad at remembering. The exact flag for a command I use twice a year. The shape of a config file I always have to look up. The regex I could write but would rather not. _None of that is where my value is_, and none of it is where I learn anything by suffering through it a fifth time. The machine is genuinely better than me at holding a thousand small, dull facts, so I let it.",
+      "But there is a line, and I guard it. **I do not automate understanding.** When a model hands me code, I read it before it goes anywhere near a branch that matters. When it explains why something broke, I treat that as a lead to check, not a verdict to trust. The moment I let the AI understand the system _instead_ of me rather than _alongside_ me, I have quietly traded away the one thing that makes me useful. A developer who cannot explain their own code is just a very fast way to ship a bug.",
+      "I also keep the decisions. What to build, what to cut, what good enough actually means here, which trade-off is worth it. The model is happy to have an opinion on all of that, and sometimes it is a useful one, but the taste and the judgment are mine to own because I am the one who has to live with the result. _AI is a wonderful way to explore options and a terrible way to avoid having one._",
+      "There is a quieter reason too. Some of the slow work is where the learning hides. The first time I debug an unfamiliar system by hand, I come out knowing it in a way no summary could give me. If I automate every bit of friction, I also automate away the part where I actually get better. So on the things I want to grow in, I deliberately slow down and do it myself, even when the machine could have done it in seconds. **Friction is not always waste. Sometimes it is the lesson.**",
+      "So my rule is simple, even if the line moves. Automate the work that is between you and the thinking. Keep the thinking. Let the machine carry the thousand dull facts and the rough first draft, and spend what it gives you back on understanding, judgment, and the hard part that is actually yours. The goal was never to do less. **It was to spend more of myself on the work that only I can do.**",
+    ],
+  },
+  {
     slug: "taking-apart-nba-2k",
     title: "Taking Apart NBA 2K",
     date: "2026-09-24",
